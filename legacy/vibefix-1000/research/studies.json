@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://metr.org",
+    "name": "Measuring the Impact of Early-2025 AI on Experienced",
+    "snippet": "Jul 10, 2025 — When developers are allowed to use AI tools, they take 19 % longer to complete issues—a significant slowdown that goes against developer beliefs ...",
+    "host_name": "metr.org",
+    "rank": 0,
+    "date": "Jul 10, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://survey.stackoverflow.co",
+    "name": "2025 Stack Overflow Developer Survey",
+    "snippet": "More developers actively distrust the accuracy of AI tools (46%) than trust it (33%), and only a fraction (3%) report \"highly trusting\" the output.",
+    "host_name": "survey.stackoverflow.co",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://stackoverflow.blog",
+    "name": "Developers remain willing but reluctant to use AI",
+    "snippet": "Dec 29, 2025 — In fact, 66% of developers say they are spending more time fixing \"almost-right\" AI -generated code . When the code gets complicated and the ...",
+    "host_name": "stackoverflow.blog",
+    "rank": 2,
+    "date": "Dec 29, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://dev.to",
+    "name": "Developers Think AI Makes Them 24% Faster. It Actually",
+    "snippet": "Mar 29, 2026 — Developer s using AI coding tools believe they're 24% faster. Measured objectively, they're actually 19% slower. That's a 43-point perception ...",
+    "host_name": "dev.to",
+    "rank": 3,
+    "date": "Mar 29, 2026",
+    "favicon": ""
+  }
+]

@@ -1,0 +1,61 @@
+{
+  "name": "Instagram AI Content - Prepare (approval first)",
+  "nodes": [
+    {
+      "parameters": {"rule": {"interval": [{"field": "hours", "hoursInterval": 24}]}},
+      "id": "schedule-prepare",
+      "name": "Daily content schedule",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [-760, 0]
+    },
+    {
+      "parameters": {
+        "jsCode": "const topics = ['café de mañana', 'paseo urbano', 'rutina de lectura', 'outfit casual', 'atardecer en terraza'];\nconst topic = topics[new Date().getDate() % topics.length];\nconst identity = 'personaje virtual adulto, ficticio y claramente presentado como generado por IA';\nconst prompt = `Create a realistic vertical social-media ${topic} scene featuring ${identity}. Natural daylight, candid smartphone photography, coherent face and hair, realistic hands, tasteful everyday clothing, no logos, no minors, no sexualized framing, no real-person likeness, no text embedded in image. 9:16 composition.`;\nreturn [{ json: {\n  content_id: `ig-${new Date().toISOString().replace(/[:.]/g, '-')}`,\n  media_type: 'image',\n  topic,\n  prompt,\n  caption_draft: `Un momento normal de mi día: ${topic}. Personaje virtual generado con IA.`,\n  disclosure_required: true,\n  status: 'pending_generation',\n  created_at: new Date().toISOString()\n} }];"
+      },
+      "id": "build-prompt",
+      "name": "Build safe content brief",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [-520, 0]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{$env.MEDIA_GENERATION_URL || 'https://YOUR-MEDIA-PROVIDER.example/v1/generations'}}",
+        "sendHeaders": true,
+        "headerParameters": {"parameters": [{"name": "Authorization", "value": "=Bearer {{$env.MEDIA_GENERATION_API_KEY || 'CONFIGURE_ME'}}"}, {"name": "Content-Type", "value": "application/json"}]},
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({model: $env.MEDIA_MODEL || 'YOUR_MODEL', prompt: $json.prompt, aspect_ratio: '9:16', output_format: 'mp4_or_jpg', webhook_url: $env.MEDIA_CALLBACK_URL || null}) }}",
+        "options": {"timeout": 120000},
+        "response": {"response": {"responseFormat": "json"}}
+      },
+      "id": "generate-media",
+      "name": "Generate image/video (configure provider)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [-240, 0]
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $('Build safe content brief').first().json;\nconst provider = $json;\nreturn [{ json: { ...input, provider_response: provider, status: 'awaiting_human_approval', media_url: provider.output_url || provider.url || provider.data?.output_url || null, approval_note: 'Revisa realismo, derechos, etiquetado IA y ausencia de personas reales antes de publicar.' } }];"
+      },
+      "id": "approval-packet",
+      "name": "Create approval packet",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [40, 0]
+    }
+  ],
+  "connections": {
+    "Daily content schedule": {"main": [[{"node": "Build safe content brief", "type": "main", "index": 0}]]},
+    "Build safe content brief": {"main": [[{"node": "Generate image/video (configure provider)", "type": "main", "index": 0}]]},
+    "Generate image/video (configure provider)": {"main": [[{"node": "Create approval packet", "type": "main", "index": 0}]]}
+  },
+  "active": false,
+  "settings": {"executionOrder": "v1"},
+  "versionId": "ig-ai-prepare-v1",
+  "meta": {"templateCredsSetupCompleted": false},
+  "tags": []
+}

@@ -1,0 +1,2208 @@
+{
+  "schemaVersion": "3.0.0",
+  "source": "massive-1.1",
+  "generatedAt": "2026-08-15T08:31:59.633Z",
+  "entries": [
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "1",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "despiértame a las nueve de la mañana el viernes",
+      "intentCategory": "48",
+      "contextTags": [
+        "16",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.631Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "2",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "pon una alarma en dos horas desde ahora",
+      "intentCategory": "48",
+      "contextTags": [
+        "16",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.631Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "4",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "olly silencio",
+      "intentCategory": "46",
+      "contextTags": [
+        "10",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.631Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "5",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "parar",
+      "intentCategory": "46",
+      "contextTags": [
+        "10",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.631Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "6",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "olly para por un minuto",
+      "intentCategory": "46",
+      "contextTags": [
+        "10",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.631Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "7",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "para por diez segundos",
+      "intentCategory": "46",
+      "contextTags": [
+        "10",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "9",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "haz que la luz sea un poco mas cálida aquí",
+      "intentCategory": "1",
+      "contextTags": [
+        "8",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "10",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "por favor pon la luz adecuada para leer",
+      "intentCategory": "1",
+      "contextTags": [
+        "8",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "12",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "hora de dormir",
+      "intentCategory": "40",
+      "contextTags": [
+        "8",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "13",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "hora de dormir olly",
+      "intentCategory": "40",
+      "contextTags": [
+        "8",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "15",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "apaga la luz del baño",
+      "intentCategory": "40",
+      "contextTags": [
+        "8",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "16",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "olly baja las luces en la sala",
+      "intentCategory": "31",
+      "contextTags": [
+        "8",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "18",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "apaga las luces del dormitorio",
+      "intentCategory": "40",
+      "contextTags": [
+        "8",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "20",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "ajusta las luces a veinte por ciento",
+      "intentCategory": "1",
+      "contextTags": [
+        "8",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "21",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "solo ponga las luces a veinte por ciento",
+      "intentCategory": "1",
+      "contextTags": [
+        "8",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "22",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "atenua las luces en la cocina olly",
+      "intentCategory": "31",
+      "contextTags": [
+        "8",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "23",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "baja las luces de la cocina",
+      "intentCategory": "31",
+      "contextTags": [
+        "8",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "25",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "olly limpia el piso",
+      "intentCategory": "34",
+      "contextTags": [
+        "8",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "28",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "aspirar la casa",
+      "intentCategory": "34",
+      "contextTags": [
+        "8",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "29",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "aspira la casa olly",
+      "intentCategory": "34",
+      "contextTags": [
+        "8",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "32",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "aspirar las alfombras alrededor",
+      "intentCategory": "34",
+      "contextTags": [
+        "8",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "33",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "mirar cuando empieza el espectáculo",
+      "intentCategory": "32",
+      "contextTags": [
+        "2",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "34",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "quiero escuchar la canción de arijit singh una vez más",
+      "intentCategory": "45",
+      "contextTags": [
+        "3",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "35",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "quiero poner esa música una vez mas",
+      "intentCategory": "45",
+      "contextTags": [
+        "3",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "36",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "chequea si mi coche está listo",
+      "intentCategory": "12",
+      "contextTags": [
+        "9",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "37",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "comprueba si funciona mi portatil",
+      "intentCategory": "12",
+      "contextTags": [
+        "9",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "38",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "se está agotando el brillo de mi pantalla",
+      "intentCategory": "12",
+      "contextTags": [
+        "9",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "39",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "necesito los servicios de ubicacion puedes comprobar",
+      "intentCategory": "12",
+      "contextTags": [
+        "9",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "40",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "comprobar el estado de mi uso de energía",
+      "intentCategory": "12",
+      "contextTags": [
+        "9",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "43",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "no estoy cansada estoy en realidad feliz",
+      "intentCategory": "12",
+      "contextTags": [
+        "9",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "44",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "no estoy cansado en realidad estoy feliz",
+      "intentCategory": "12",
+      "contextTags": [
+        "9",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "45",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "que pasa",
+      "intentCategory": "5",
+      "contextTags": [
+        "9",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "48",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "dime la hora en madrid",
+      "intentCategory": "0",
+      "contextTags": [
+        "5",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "49",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "dime la hora en el huso horario más cinco",
+      "intentCategory": "38",
+      "contextTags": [
+        "5",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "51",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "alexa opciones de entrega mejor valoradas de comida china",
+      "intentCategory": "3",
+      "contextTags": [
+        "14",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "52",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "opciones de entrega de comida china más valoradas",
+      "intentCategory": "3",
+      "contextTags": [
+        "14",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "54",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "olly las opciones mas votadas de entrega de comida china a domicilio",
+      "intentCategory": "3",
+      "contextTags": [
+        "14",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "55",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "quiero pedir curry para llevar alguna recomendación",
+      "intentCategory": "3",
+      "contextTags": [
+        "14",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "56",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "quiero pedir curry para llevar hay alguna recomendación alexa",
+      "intentCategory": "3",
+      "contextTags": [
+        "14",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "57",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "encontrar mi comida thai para llevar tailandesa alrededor de mercado central",
+      "intentCategory": "3",
+      "contextTags": [
+        "14",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "60",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "parar alarma de las siete de la mañana",
+      "intentCategory": "52",
+      "contextTags": [
+        "16",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "62",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "por favor enumera alarmas activas",
+      "intentCategory": "23",
+      "contextTags": [
+        "16",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "65",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "qué está pasando en el fútbol hoy",
+      "intentCategory": "22",
+      "contextTags": [
+        "4",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "66",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "por favor pon ayer de los beatles",
+      "intentCategory": "45",
+      "contextTags": [
+        "3",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "69",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "me gusta la música rock",
+      "intentCategory": "43",
+      "contextTags": [
+        "15",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "70",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "mi grupo de musica favorito es despistados",
+      "intentCategory": "43",
+      "contextTags": [
+        "15",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "72",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "comienza a reproducir musica de favoritos",
+      "intentCategory": "45",
+      "contextTags": [
+        "3",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "73",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "por favor pon mi mejor música",
+      "intentCategory": "45",
+      "contextTags": [
+        "3",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "75",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "quién es el autor de esta música",
+      "intentCategory": "57",
+      "contextTags": [
+        "15",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "76",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "cual es ese álbum de música actual",
+      "intentCategory": "57",
+      "contextTags": [
+        "15",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "77",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "realmente estoy disfrutando de esta canción",
+      "intentCategory": "43",
+      "contextTags": [
+        "15",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "78",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "la canción que estás tocando es increible",
+      "intentCategory": "43",
+      "contextTags": [
+        "15",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "79",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "esta es una de las mejores canciones para mi",
+      "intentCategory": "43",
+      "contextTags": [
+        "15",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "81",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "hacer que las luces sean más brillantes",
+      "intentCategory": "18",
+      "contextTags": [
+        "8",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "82",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "por favor sube las luces al máximo",
+      "intentCategory": "18",
+      "contextTags": [
+        "8",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "83",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "hey enciende el robot limpiador",
+      "intentCategory": "34",
+      "contextTags": [
+        "8",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "84",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "enciende el robot de limpieza",
+      "intentCategory": "34",
+      "contextTags": [
+        "8",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "87",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "pide algo de sushi para la cena",
+      "intentCategory": "16",
+      "contextTags": [
+        "14",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "88",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "hola me gustaría que pidas una hamburguesa",
+      "intentCategory": "16",
+      "contextTags": [
+        "14",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "91",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "puedo pedir cena para llevar de la carola",
+      "intentCategory": "16",
+      "contextTags": [
+        "14",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "92",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "el burger king hace pedidos para llevar",
+      "intentCategory": "3",
+      "contextTags": [
+        "14",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "93",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "poner una alarma a las doce",
+      "intentCategory": "48",
+      "contextTags": [
+        "16",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "94",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "poner una alarma dentro de cuarenta minutos",
+      "intentCategory": "48",
+      "contextTags": [
+        "16",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "95",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "poner alarma a las ocho cada día entre semana",
+      "intentCategory": "48",
+      "contextTags": [
+        "16",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "96",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "está lloviendo",
+      "intentCategory": "13",
+      "contextTags": [
+        "17",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "97",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "va a llover",
+      "intentCategory": "13",
+      "contextTags": [
+        "17",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "98",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "está nevando ahora mismo",
+      "intentCategory": "13",
+      "contextTags": [
+        "17",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "101",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "cómo está el tiempo esta semana",
+      "intentCategory": "13",
+      "contextTags": [
+        "17",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "104",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "dime las noticias del país",
+      "intentCategory": "22",
+      "contextTags": [
+        "4",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "105",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "cuáles son las noticias en t. v. e. noticias",
+      "intentCategory": "22",
+      "contextTags": [
+        "4",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "106",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "cuáles son las últimas noticias del veinte minutos",
+      "intentCategory": "22",
+      "contextTags": [
+        "4",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "108",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "pon una canción que me guste",
+      "intentCategory": "45",
+      "contextTags": [
+        "3",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "110",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "pon daft punk",
+      "intentCategory": "45",
+      "contextTags": [
+        "3",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "111",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "pon algunas de coldplay",
+      "intentCategory": "45",
+      "contextTags": [
+        "3",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "114",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "pon en modo aleatorio esta lista de reproducción",
+      "intentCategory": "28",
+      "contextTags": [
+        "15",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "116",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "qué está sonando",
+      "intentCategory": "57",
+      "contextTags": [
+        "15",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "117",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "que música es esta",
+      "intentCategory": "57",
+      "contextTags": [
+        "15",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "118",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "dime quién es el artista de esta canción",
+      "intentCategory": "57",
+      "contextTags": [
+        "15",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "119",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "hazme reir",
+      "intentCategory": "25",
+      "contextTags": [
+        "9",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "120",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "olly hazme reir",
+      "intentCategory": "25",
+      "contextTags": [
+        "9",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "121",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "cuéntame un buen chiste",
+      "intentCategory": "25",
+      "contextTags": [
+        "9",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "123",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "cuentame un chiste",
+      "intentCategory": "25",
+      "contextTags": [
+        "9",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "125",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "alexa cuentame un chiste",
+      "intentCategory": "25",
+      "contextTags": [
+        "9",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "126",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "animame",
+      "intentCategory": "25",
+      "contextTags": [
+        "9",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "129",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "cuentame sobre hoy",
+      "intentCategory": "12",
+      "contextTags": [
+        "9",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "130",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "pedir una pizza",
+      "intentCategory": "16",
+      "contextTags": [
+        "14",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "131",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "pídeme un sandwich de pollo de deliveroo",
+      "intentCategory": "16",
+      "contextTags": [
+        "14",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "133",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "cuando llegará mi pedido",
+      "intentCategory": "3",
+      "contextTags": [
+        "14",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "134",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "cuánto va a tardar mi pedido a domicilio",
+      "intentCategory": "3",
+      "contextTags": [
+        "14",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "135",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "estado del pedido del domino's pizza",
+      "intentCategory": "3",
+      "contextTags": [
+        "14",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "136",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "qué está sonando",
+      "intentCategory": "57",
+      "contextTags": [
+        "15",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "137",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "dime el nombre de esta canción",
+      "intentCategory": "57",
+      "contextTags": [
+        "15",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "139",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "pon mi playlist de jazz",
+      "intentCategory": "45",
+      "contextTags": [
+        "3",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "140",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "iniciar mi playlist de jazz",
+      "intentCategory": "45",
+      "contextTags": [
+        "3",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "141",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "reproduce mi playlist favorita",
+      "intentCategory": "45",
+      "contextTags": [
+        "3",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "142",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "esa es una buena canción",
+      "intentCategory": "43",
+      "contextTags": [
+        "15",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "143",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "no me gusta",
+      "intentCategory": "7",
+      "contextTags": [
+        "15",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "144",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "a mi me gusta esto",
+      "intentCategory": "43",
+      "contextTags": [
+        "15",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "145",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "me gusta el jazz",
+      "intentCategory": "43",
+      "contextTags": [
+        "15",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    },
+    {
+      "schemaVersion": "3.0.0",
+      "sourceId": "massive-1.1",
+      "sourceUrl": "https://huggingface.co/datasets/AmazonScience/massive",
+      "sourceRecordId": "146",
+      "language": "es-ES",
+      "region": "ES",
+      "variant": "standardized_localized_utterance",
+      "normalizedForm": "puedes poner algo de jazz",
+      "intentCategory": "45",
+      "contextTags": [
+        "3",
+        "public_dataset",
+        "pii_filtered"
+      ],
+      "confidence": 0.5,
+      "reviewStatus": "candidate",
+      "provenance": {
+        "method": "transient_fetch_normalize_discard_raw",
+        "fetchedAt": "2026-08-15T08:31:59.632Z"
+      }
+    }
+  ],
+  "rejected": []
+}

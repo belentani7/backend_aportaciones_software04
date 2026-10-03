@@ -1,0 +1,131 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// 1000 soluciones reales a problemas reales de la comunidad vibe coding
+model Solution {
+  id          String   @id @default(cuid())
+  code        Int      @unique // nº de solución 1..1000
+  title       String
+  problem     String
+  category    String // clave de dominio: contexto | alucinaciones | entorno | git | despliegue | seguridad | rendimiento | costes | colaboracion | pruebas
+  tool        String // Claude Code | GitHub Copilot | Cursor | ...
+  environment String // monorepo | legacy | greenfield | ...
+  severity    String // baja | media | alta | critica
+  frequency   Int // % aproximado de devs afectados según reportes
+  source      String // fuente real de la queja
+  rootCause   String
+  steps       String // JSON array de pasos
+  codeFix     String
+  prevention  String
+  tags        String // JSON array de tags
+  createdAt   DateTime @default(now())
+
+  @@index([category])
+  @@index([tool])
+  @@index([severity])
+  @@index([environment])
+}
+
+// Rutas de ingreso con datos reales y fuentes verificables
+model IncomePath {
+  id                String   @id @default(cuid())
+  code              Int      @unique
+  title             String
+  category          String // freelance-ia | localizacion | automatizacion | productos | consultoria
+  summary           String
+  realRate          String // tarifa real documentada con fuente
+  rateMinPerHour    Float // €/h conservador
+  rateMaxPerHour    Float // €/h optimista documentado
+  platforms         String // JSON [{name, url, fee, note}]
+  evidence          String // JSON [{source, url, claim}]
+  matchRepos        String // JSON repos de belentani7 que aplican
+  timeToFirstIncome String
+  effort            String // bajo | medio | alto
+  demandLevel       String // evidencia de demanda con número
+  steps             String // JSON array de pasos accionables
+  createdAt         DateTime @default(now())
+
+  @@index([category])
+}
+
+// Historial del traductor humano → lenguaje de IA (funciona de verdad)
+model Translation {
+  id          String   @id @default(cuid())
+  humanInput  String
+  aiPrompt    String // prompt final optimizado
+  framework   String // JSON {role, context, task, constraints, outputFormat}
+  tier        String // tier de enrutamiento estilo meta-skill
+  createdAt   DateTime @default(now())
+}
+
+// Repos reales del perfil github.com/belentani7 (datos verificados via API/scrape)
+model GithubRepo {
+  id           String   @id @default(cuid())
+  name         String   @unique
+  description  String
+  language     String?
+  category     String // ia-agentes | idiomas | seguridad | educacion | herramientas | otros
+  monetization String // análisis real de vía de monetización
+  relatedPath  Int? // code de IncomePath asociado
+  pushedAt     DateTime?
+  createdAt    DateTime @default(now())
+}
+
+// Análisis semanal generado por IA (con búsqueda web real)
+model WeeklyAnalysis {
+  id               String   @id @default(cuid())
+  weekLabel        String // "Semana 37 · 2026"
+  title            String
+  trendSummary     String
+  keyFindings      String // JSON array
+  proposedSolution String // JSON {name, description, steps[]}
+  skillIdea        String
+  reposStudied     String // JSON array {name, description, why}
+  generatedAt      DateTime @default(now())
+}
+
+// 100 arquetipos base (fuente de las 1000 soluciones)
+model Archetype {
+  id          String   @id @default(cuid())
+  archetypeId String   @unique @map("archetype_id") // ctx-01, hal-01, etc.
+  domain      String
+  title       String
+  problem     String
+  rootCause   String
+  steps       String // JSON array
+  codeFix     String
+  prevention  String
+  tags        String // JSON array
+  severity    String
+  frequency   Int
+  source      String
+  createdAt   DateTime @default(now())
+
+  @@index([domain])
+  @@index([severity])
+}
+
+// Sesiones del motor diagnóstico
+model DiagnosisSession {
+  id                String   @id @default(cuid())
+  sessionId         String   @unique
+  phase             String   // intent | discovery | analysis | solution
+  intent            String?
+  intentConfidence  Float?
+  answers           String   // JSON
+  currentQuestion   String?
+  questionIndex     Int      @default(0)
+  matchedArchetypes String   // JSON array
+  recommendedSolutions String // JSON array
+  incomePaths       String   // JSON array
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@index([sessionId])
+}

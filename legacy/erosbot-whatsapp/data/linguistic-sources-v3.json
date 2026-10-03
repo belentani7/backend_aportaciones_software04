@@ -1,0 +1,86 @@
+{
+  "version": "3.0.0",
+  "policy": {
+    "rawTextStorage": false,
+    "personalData": "exclude",
+    "privateOrLoginOnly": "exclude",
+    "preciseLocationsAndContacts": "exclude",
+    "adsAndForums": "patterns_only_with_terms_review",
+    "humanReviewRequired": true,
+    "commercialUse": "verify_per_source"
+  },
+  "sources": [
+    {
+      "id": "massive-1.1",
+      "name": "MASSIVE 1.1",
+      "url": "https://huggingface.co/datasets/AmazonScience/massive",
+      "type": "intent_and_slot_dataset",
+      "license": "CC-BY-4.0",
+      "status": "candidate",
+      "languages": ["de-DE", "el-GR", "es-ES", "fr-FR", "it-IT", "nl-NL", "pl-PL", "pt-PT", "ro-RO"],
+      "use": ["intent_taxonomy", "slot_boundaries", "language_quality_signals", "spelling_quality_signals"],
+      "exclude": ["worker_ids", "raw_utterance_copying", "identity_linkage"],
+      "notes": "Public dataset documentation describes 1M utterances across 52 languages, 60 intents and 55 slot types, with no personal or sensitive information claim. Attribution and licence verification remain mandatory."
+    },
+    {
+      "id": "universal-dependencies",
+      "name": "Universal Dependencies treebanks",
+      "url": "https://universaldependencies.org/",
+      "type": "morphosyntax_and_web_text_annotations",
+      "license": "mixed_per_treebank",
+      "status": "review_each_treebank",
+      "languages": ["de", "el", "en", "es", "fr", "it", "nl", "pl", "pt", "ro", "bg", "cs"],
+      "use": ["tokenization", "lemmas", "morphology", "multiword_expressions", "typo_evaluation"],
+      "exclude": ["underlying_text_without_rights", "phone_numbers", "addresses", "emails"],
+      "notes": "UD explicitly states that licenses vary and some are non-commercial. The individual LICENSE.txt and README metadata must be checked before commercial use."
+    },
+    {
+      "id": "opus",
+      "name": "OPUS parallel corpora",
+      "url": "https://opus.nlpl.eu/",
+      "type": "parallel_translation_corpora",
+      "license": "mixed_per_corpus",
+      "status": "review_each_corpus",
+      "languages": ["de", "el", "en", "es", "fr", "it", "nl", "pl", "pt", "ro", "bg", "cs"],
+      "use": ["translation_alignment", "terminology", "language_connections"],
+      "exclude": ["raw_corpus_redistribution_without_license", "personal_data", "unverified_sources"],
+      "notes": "OPUS is a catalogue of many corpora; rights and terms must be verified at the individual corpus level."
+    },
+    {
+      "id": "european-language-grid",
+      "name": "European Language Grid catalogue",
+      "url": "https://live.european-language-grid.eu/catalogue/?page=1",
+      "type": "resource_catalogue",
+      "license": "per_resource",
+      "status": "catalogue_only",
+      "languages": ["de", "el", "en", "es", "fr", "it", "nl", "pl", "pt", "ro", "bg", "cs"],
+      "use": ["resource_discovery", "tool_discovery", "license_metadata"],
+      "exclude": ["automatic_download_without_review"],
+      "notes": "Use the catalogue to discover resources; do not treat catalogue presence as permission to copy or redistribute data."
+    },
+    {
+      "id": "common-corpus",
+      "name": "Common Corpus",
+      "url": "https://huggingface.co/blog/Pclanglais/two-trillion-tokens-open",
+      "type": "large_open_multilingual_corpus",
+      "license": "per_source_and_per_document",
+      "status": "review_required",
+      "languages": ["de", "el", "en", "es", "fr", "it", "nl", "pl", "pt", "ro", "bg", "cs"],
+      "use": ["language_coverage", "terminology_discovery", "evaluation_candidates"],
+      "exclude": ["bulk_copying_before_source_license_review", "personal_data", "restricted_documents"],
+      "notes": "Use only source records whose provenance and license are explicit."
+    },
+    {
+      "id": "public-forums-and-ads",
+      "name": "Public forums, comments and classified ads",
+      "url": null,
+      "type": "web_sources",
+      "license": "site_terms_required",
+      "status": "pattern_mining_only",
+      "languages": ["de", "el", "en", "es", "fr", "it", "nl", "pl", "pt", "ro", "bg", "cs"],
+      "use": ["abbreviation_discovery", "regional_variant_discovery", "spelling_error_discovery", "intent_pattern_candidates"],
+      "exclude": ["profiles", "names", "phones", "images", "coordinates", "full_posts", "private_groups", "login_only_pages", "republication"],
+      "notes": "No site is approved by default. Each domain requires terms, robots, access limits, retention and legal review. Store only aggregated pattern metadata or hashes."
+    }
+  ]
+}

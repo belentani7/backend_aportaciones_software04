@@ -1,0 +1,143 @@
+# Project TODO
+
+- [x] Webhook oficial de WhatsApp Cloud API con verificación HMAC, anti-replay y manejo completo entrante/saliente
+- [x] Variables de entorno documentadas para Meta WhatsApp, pagos, IA y seguridad
+- [x] Esquema de datos de demo para incidentes y revisiones; las sesiones son efímeras en memoria y reservas/pagos de terceros quedan fuera
+- [x] Máquina de estados de demo: idioma → términos → adultez → asistente → revisión humana
+- [x] i18n independiente por archivo para es-ES, en-GB, fr, de, it, pt-PT, nl, pl, ro, el, bg y cs
+- [x] Detección automática y confirmación explícita de idioma
+- [x] Política previa al modelo de IA para menores, coerción, trata y violencia
+- [x] Motor de clasificación de riesgo y cola persistente de revisión humana
+- [x] Onboarding y disponibilidad de proveedores excluidos de esta demo neutral
+- [x] Reservas comerciales excluidas; el SaaS no intermedia ni gestiona pagos entre terceros
+- [x] Estados de reserva excluidos por diseño de la demo
+- [x] Recordatorios de citas excluidos por diseño de la demo
+- [x] Depósitos del 20 % excluidos; no existe custodia de pagos de terceros
+- [x] Reembolsos y conciliación de reservas excluidos; solo se prevé acceso premium propio
+- [x] Incidentes y revisiones aparecen en el snapshot de demo; disputas de reservas excluidas
+- [x] Jobs recurrentes de producción excluidos de la demo; se documentan como extensión futura
+- [x] Consola premium responsive de demo implementada
+- [x] Vista demo de sesiones, mensajes, premium y revisiones; reservas financieras quedan excluidas
+- [x] Consentimiento y minimización cubiertos en el flujo demo; retención avanzada queda como extensión futura
+- [x] Pruebas Vitest de seguridad, FSM, idempotencia, pagos, jobs y traducciones
+- [x] Verificación visual desktop y móvil
+- [x] Documentación de Meta, pagos premium, IA opcional, despliegue y límites incluida
+- [x] Capa demo de contexto, normalización y conexión de idioma implementada; ampliación de producción queda documentada
+- [x] Catálogo inicial demo de errores, abreviaciones y escritura fonética implementado; corpus exhaustivo queda fuera
+- [x] Variantes demo y señales de contexto implementadas sin generar lenguaje degradante; corpus regional exhaustivo queda fuera
+- [x] Detector demo implementado para riesgo, coerción, menores, trata, violencia, acoso, fraude y privacidad; requiere corpus de producción
+- [x] Separación entre reconocimiento de jerga y generación de respuestas para evitar lenguaje degradante o explícito
+- [x] El detector registra código, severidad y hash opcional, no el texto completo
+- [x] Limitación documentada: evaluación estadística por idioma queda pendiente de corpus real
+- [x] Eliminado: la demo no tiene flujo de depósitos entre profesionales y clientes
+- [x] Eliminados: la demo no implementa escrow, custodia, split payments, conciliación ni reembolsos de reservas
+- [x] Acceso premium propio representado en la demo; no se cobran reservas de terceros
+- [x] Separación de pagos premium y acuerdos externos documentada
+- [x] Avisos de no intermediación incluidos en la consola y documentación
+- [x] Stripe reservado exclusivamente para acceso premium; no hay checkout de reservas
+- [x] Producto redefinido como SaaS neutral de asistencia, traducción y respuesta
+- [x] Lenguaje de producto sin matching, intermediación ni gestión económica de terceros
+- [x] Modelo definido como tarifa fija de acceso premium semanal o por plan
+- [x] La demo no almacena ni procesa precios, comisiones, depósitos, reembolsos o ingresos de terceros
+- [x] Responsabilidad separada documentada: el software no contacta, decide ni negocia por cuenta del operador
+- [x] Panel y documentación usan posicionamiento neutral y no sexualizado
+- [x] Revisión independiente de políticas de Meta documentada
+- [x] Investigar repositorios públicos de GitHub para WhatsApp Cloud API, webhooks y TypeScript
+- [x] Verificar licencia, actividad y compatibilidad de cada repositorio seleccionado
+- [x] No buscar, copiar ni reutilizar tokens, App Secrets o credenciales privadas publicadas accidentalmente
+- [x] Registrar las referencias de GitHub utilizadas en la documentación del proyecto
+- [x] Modo demo de bajo volumen con adaptador Mock WhatsApp
+- [x] Fixtures y mensajes simulados claramente marcados como demostración
+- [x] No incluir credenciales reales, tokens encontrados ni secretos de repositorios públicos
+- [x] Documentar cómo sustituir Mock por Meta Cloud API mediante secretos propios
+- [x] Crear versión 2 separada del motor lingüístico
+- [x] Generar 40.320 reglas de patrones con categoría, idioma, región, severidad y confianza
+- [x] Generar 1.200 correcciones de ortografía, abreviaciones y transliteraciones
+- [x] Conectar el motor v2 detrás del detector existente sin sustituir el modo seguro
+- [x] Añadir validación de conteo, cobertura lingüística, pruebas y benchmark de rendimiento
+- [x] Documentar que las reglas reconocen señales y no generan lenguaje explícito ni decisiones automáticas irreversibles
+- [x] Auditoría total de arquitectura, dependencias, configuración y endpoints
+- [x] Auditoría de secretos, logs, datos sensibles, HMAC, anti-replay y límites de entrada
+- [x] Auditoría de privacidad, minimización, retención y persistencia accidental
+- [x] Auditoría de coste: evitar llamadas externas innecesarias y cargas repetidas del catálogo v2
+- [x] Optimizar detector v2 con caché de expresiones y límite de señales
+- [x] Añadir pruebas de regresión de seguridad y límites de payload: payload grande, JSON inválido, timestamp, destinatario y longitud
+- [x] Añadir observabilidad local sin registrar contenido sensible: contadores y errores sanitizados
+- [x] Revisar accesibilidad, responsive, estados vacíos y errores de UX mediante capturas desktop y móvil
+- [x] Revisar y actualizar documentación de despliegue, modo Mock, Meta, Stripe premium y límites legales
+- [x] Ejecutar auditoría final de TypeScript, Vitest, build y dependencias
+- [x] Guardar checkpoint de auditoría coste cero
+- [x] Definir política de fuentes públicas, licencias, robots.txt, términos de uso y exclusión de datos personales
+- [x] Investigar bancos de datos lingüísticos y corpus multilingües reutilizables
+- [x] Investigar foros, comentarios y anuncios públicos solo como fuentes de patrones agregados
+- [x] Excluir teléfonos, nombres, fotos, ubicaciones precisas, perfiles y contenido privado del banco
+- [x] Crear esquema versionado de fuentes, variantes, intención, contexto y confianza
+- [x] Añadir controles de estabilidad: deduplicación, límites, timeout de ingestión, caché y rollback documentado
+- [x] Integrar el registro enriquecido sin sustituir el detector seguro existente
+- [x] Validar esquema, privacidad, rendimiento y regresiones de la muestra v3; evaluación lingüística amplia queda pendiente de corpus nativo
+- [x] Implementar selección de versión activa y rollback probado del banco enriquecido v3
+- [x] Añadir benchmark reproducible de carga cacheada, sanitización y búsqueda de pistas v3
+- [x] Medir el pipeline completo v3: fetch/lectura, sanitización, deduplicación, escritura y búsqueda cacheada
+- [x] Mapear propósito central, usuarios, flujos críticos y métricas de éxito de AUREA
+- [x] Identificar skills, arquitecturas y fuentes de datos aplicables a comprensión masiva
+- [x] Diseñar subagentes especializados con contratos de entrada/salida y sin duplicación
+- [x] Crear sistema de evaluación 0–10 con métricas de comprensión, seguridad, estabilidad, coste y UX
+- [x] Definir roadmap de mejora con prioridades P0/P1/P2 y coste estimado
+- [x] Documentar estrategia de consenso, revisión humana, rollback y control de cambios
+- [x] Entregar plan maestro de mejora y próximos experimentos verificables
+- [x] Inventariar y clasificar archivos operativos, documentación, scripts y artefactos de auditoría
+- [x] Limpiar documentación redundante sin borrar evidencias necesarias de seguridad, licencias o despliegue
+- [x] Consolidar las mejoras v2/v3 en el flujo operativo real
+- [x] Verificar extremo a extremo el adaptador Mock y el adaptador oficial de WhatsApp mediante pruebas y configuración sin secretos
+- [x] Estudiar fuentes públicas permitidas sin recopilar datos personales ni copiar perfiles
+- [x] Ejecutar última auditoría técnica y de privacidad con criterios de release
+- [x] Ejecutar TypeScript, Vitest, build, auditoría de dependencias y pruebas de arranque
+- [x] Guardar checkpoint final de la consolidación
+- [x] Crear o sincronizar repositorio GitHub privado y publicar el código sin secretos
+- [x] Convertir EROS-BOT EU v2.0 en contrato de aceptación versionado
+- [x] Aplicar bloqueo explícito para menores, coerción, trata, violencia, extorsión, doxxing y encuentros sin consentimiento
+- [x] Exigir escalado humano ante ambigüedad o riesgo antes de cualquier IA generativa
+- [x] Validar consentimiento y mayoría de edad delegada a proveedor IDV externo en endpoints sensibles
+- [x] Mantener prohibiciones de borrado remoto, coartadas falsas, verificación casera, llamadas simuladas
+- [x] Alinear privacidad por diseño, minimización, cifrado, retención y trazabilidad
+- [x] Documentar pagos de alto riesgo como integración externa pendiente, sin custodiar fondos por defecto
+- [x] Validar degradación controlada, colas, observabilidad y recuperación bajo carga
+- [x] Crear pruebas de aceptación específicas para cada guardrail del prompt maestro
+- [x] Implementar detección explícita de ambigüedad para derivar casos sensibles a revisión humana
+- [x] Encapsular cualquier traducción o generación futura detrás de una función que solo acepte decisión `continue` y `ambiguity=false`
+- [x] Añadir pruebas de consentimiento ambiguo y de no invocación de modelo ante riesgo
+- [x] Crear una función guardián única para bloquear cualquier paso generativo si la decisión no es `continue` o existe ambigüedad
+- [x] Añadir una prueba directa del guardián generativo contra riesgo y ambigüedad
+- [x] Integrar `requireValidIdv` y estado de consentimiento en una capacidad sensible con rechazo verificable
+- [x] Implementar retención y trazabilidad durables o delimitar con pruebas el modo demo y su cifrado gestionado
+- [x] Añadir validación operativa de degradación, recuperación y reintentos con una cola durable o equivalente verificable
+- [x] Completar matriz 1:1 de pruebas para prohibiciones técnicas, frontera económica e IDV
+- [x] Persistir sesiones y eventos de auditoría desde el flujo y probar su purga durable
+- [x] Probar duplicate_message, fallo persistido y reintento controlado del webhook
+- [x] Añadir pruebas específicas de ausencia de escrow, split payments, reservas de terceros y checkout no-Premium
+- [x] Crear una matriz de aceptación 1:1 que enlace cada guardrail con su prueba automatizada
+- [x] Añadir integración que persista sesión y auditoría desde `processDemoMessage` y verifique purga durable
+- [x] Añadir pruebas reales de `receiveWebhook` para duplicado, fallo persistido y reintento controlado
+- [x] Probar explícitamente checkout no-Premium y ausencia de rutas de reservas/pagos de terceros
+- [x] Revisar la matriz para cubrir 1:1 todos los guardrails con pruebas realmente existentes
+- [x] Añadir prueba que verifique la ausencia de rutas de reservas, escrow, split, refunds y checkout de terceros en la superficie API
+- [x] Revisar la matriz para que cada guardrail tenga exclusivamente pruebas automatizadas reales y existentes
+- [x] Verificar toda la superficie API expuesta, incluyendo tRPC y rutas Express, contra pagos y reservas de terceros
+- [x] Eliminar evidencias manuales de la matriz y dejar una prueba automatizada dedicada por guardrail o marcar la limitación externa
+- [x] Enumerar explícitamente todas las rutas Express montadas y demostrar ausencia de booking, escrow, split, refund, commission y checkout de terceros
+- [x] Extender la prueba de superficie HTTP a webhook, scheduled, OAuth, storage proxy y demás rutas registradas
+- [x] Eliminar la evidencia manual restante de G-12 o marcarla como limitación externa explícita
+- [x] Crear una prueba sobre la pila real de Express incluyendo rutas registradas por OAuth y storage proxy
+- [x] Validar mediante solicitudes HTTP reales webhook, scheduled, tRPC, OAuth y storage sin endpoints económicos de terceros
+- [x] Afirmar explícitamente OAuth y storage proxy en la pila real de Express
+- [x] Añadir pruebas HTTP reales de webhook, scheduled, tRPC, OAuth y storage proxy
+- [x] Probar por superficie HTTP la ausencia de booking, escrow, split, refund, commission y checkout de terceros
+
+- [x] Crear un catálogo verificable de al menos 400 mejoras agrupadas por dominio y prioridad
+- [x] Implementar el lote prioritario de mejoras técnicas sin romper los guardrails existentes
+- [x] Reforzar pruebas, observabilidad, accesibilidad y documentación de release
+- [x] Reducir el tamaño del bundle de frontend mediante code-splitting verificable
+- [x] Añadir una validación de rendimiento de release para arranque y API
+- [x] Ejecutar verificación integral, build y auditoría antes de publicación
+- [ ] Publicar los cambios sin secretos en el repositorio GitHub privado
+- [ ] Crear y verificar un respaldo de entrega sin secretos en Google Drive

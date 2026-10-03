@@ -1,0 +1,251 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&family=Manrope:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-void: #000000;
+  --bg-primary: #030303;
+  --bg-elevated: #080808;
+  --bg-subtle: #0d0d0d;
+  --glass-bg: rgba(255, 255, 255, 0.02);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --glass-hover: rgba(255, 255, 255, 0.04);
+  --text-primary: #fafafa;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --text-ghost: #3f3f46;
+  --accent-uv: #8b3eff;
+  --accent-plasma: #d946ef;
+  --accent-milky: #f4f4f5;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--bg-void);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(139, 62, 255, 0.3);
+  color: white;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #8b3eff, #d946ef);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #9d5cff, #e879f9);
+}
+
+/* Glassmorphism utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+}
+
+.glass-elevated {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.glow-uv {
+  box-shadow: 0 0 20px rgba(139, 62, 255, 0.4), 0 0 40px rgba(139, 62, 255, 0.2), 0 0 80px rgba(139, 62, 255, 0.1);
+}
+
+.glow-plasma {
+  box-shadow: 0 0 20px rgba(217, 70, 239, 0.4), 0 0 40px rgba(217, 70, 239, 0.2), 0 0 80px rgba(217, 70, 239, 0.1);
+}
+
+/* Scanlines overlay */
+.scanlines::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.08) 0px,
+    rgba(0, 0, 0, 0.08) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.5;
+}
+
+/* Film grain texture */
+.grain::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  opacity: 0.02;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  z-index: 9998;
+}
+
+/* UV Grid background */
+.uv-grid {
+  background-image: 
+    linear-gradient(rgba(139, 62, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 62, 255, 0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+/* Milky light rays */
+.milky-rays {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(244, 244, 245, 0.08) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 20%, rgba(139, 62, 255, 0.06) 0%, transparent 40%),
+              radial-gradient(ellipse at 20% 80%, rgba(217, 70, 239, 0.06) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+/* Text gradient */
+.text-gradient-uv {
+  background: linear-gradient(135deg, #8b3eff 0%, #d946ef 50%, #e879f9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-plasma {
+  background: linear-gradient(135deg, #d946ef 0%, #e879f9 50%, #f0abfc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-milky {
+  background: linear-gradient(135deg, #fafafa 0%, #e4e4e7 50%, #a1a1aa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid #8b3eff;
+  outline-offset: 2px;
+}
+
+/* Typography helpers */
+.font-display {
+  font-family: 'Chakra Petch', 'Orbitron', 'Bebas Neue', sans-serif;
+}
+
+.font-heading {
+  font-family: 'Manrope', 'Outfit', 'Syne', sans-serif;
+}
+
+.font-body {
+  font-family: 'Plus Jakarta Sans', 'DM Sans', 'Satoshi', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', 'Fira Code', 'IBM Plex Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Headline styles */
+.headline-1 {
+  @apply font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-[-0.03em] leading-[0.95];
+}
+
+.headline-2 {
+  @apply font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-[-0.02em] leading-[1.05];
+}
+
+.section-title {
+  @apply font-heading text-2xl sm:text-3xl md:text-4xl font-bold tracking-[-0.015em];
+}
+
+.body-lg {
+  @apply font-body text-lg sm:text-xl leading-relaxed tracking-tight;
+}
+
+.body-md {
+  @apply font-body text-base sm:text-lg leading-relaxed;
+}
+
+.body-sm {
+  @apply font-body text-sm leading-relaxed;
+}
+
+.label {
+  @apply font-mono text-xs font-medium uppercase tracking-[0.1em] text-zinc-500;
+}
+
+.data {
+  @apply font-mono font-variant-numeric;
+}
+
+/* Utility for hiding scrollbar but keeping scroll */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Will-change for performance */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* Hardware acceleration */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}

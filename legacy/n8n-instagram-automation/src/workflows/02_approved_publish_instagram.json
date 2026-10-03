@@ -1,0 +1,73 @@
+{
+  "name": "Instagram AI Content - Approved publish only",
+  "nodes": [
+    {
+      "parameters": {"httpMethod": "POST", "path": "instagram-ai/approve", "responseMode": "onReceived", "options": {}},
+      "id": "approval-webhook",
+      "name": "Approval webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [-760, 0],
+      "webhookId": "instagram-ai-approval"
+    },
+    {
+      "parameters": {
+        "conditions": {"options": {"caseSensitive": true, "typeValidation": "strict", "version": 2}, "conditions": [{"leftValue": "={{$json.body?.publish}}", "rightValue": true, "operator": {"type": "boolean", "operation": "true", "singleValue": true}}], "combinator": "and"},
+        "options": {}
+      },
+      "id": "explicit-approval",
+      "name": "Require explicit publish=true",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [-520, 0]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{'https://graph.facebook.com/' + ($env.META_GRAPH_VERSION || 'v23.0') + '/' + $env.INSTAGRAM_USER_ID + '/media'}}",
+        "sendQuery": true,
+        "queryParameters": {"parameters": [{"name": "access_token", "value": "={{$env.META_ACCESS_TOKEN}}"}, {"name": "image_url", "value": "={{$json.body.media_url}}"}, {"name": "caption", "value": "={{$json.body.caption + '\\n\\nContenido generado con IA.'}}"}]},
+        "options": {"timeout": 30000},
+        "response": {"response": {"responseFormat": "json"}}
+      },
+      "id": "create-container",
+      "name": "Create Instagram media container",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [-240, -100]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{'https://graph.facebook.com/' + ($env.META_GRAPH_VERSION || 'v23.0') + '/' + $env.INSTAGRAM_USER_ID + '/media_publish'}}",
+        "sendQuery": true,
+        "queryParameters": {"parameters": [{"name": "creation_id", "value": "={{$json.id}}"}, {"name": "access_token", "value": "={{$env.META_ACCESS_TOKEN}}"}]},
+        "options": {"timeout": 30000},
+        "response": {"response": {"responseFormat": "json"}}
+      },
+      "id": "publish-container",
+      "name": "Publish approved media",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [40, -100]
+    },
+    {
+      "parameters": {"jsCode": "return [{json: {status: 'rejected_or_draft_only', message: 'No se publicó nada. Envía body.publish=true únicamente después de la revisión humana.', received_at: new Date().toISOString()}}];"},
+      "id": "safe-stop",
+      "name": "Safe stop",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [-240, 140]
+    }
+  ],
+  "connections": {
+    "Approval webhook": {"main": [[{"node": "Require explicit publish=true", "type": "main", "index": 0}]]},
+    "Require explicit publish=true": {"main": [[{"node": "Create Instagram media container", "type": "main", "index": 0}], [{"node": "Safe stop", "type": "main", "index": 0}]]},
+    "Create Instagram media container": {"main": [[{"node": "Publish approved media", "type": "main", "index": 0}]]}
+  },
+  "active": false,
+  "settings": {"executionOrder": "v1"},
+  "versionId": "ig-ai-publish-v1",
+  "meta": {"templateCredsSetupCompleted": false},
+  "tags": []
+}

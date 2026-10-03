@@ -1,0 +1,26 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Dependencies and runtime output
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# n8n and local data
+.n8n/
+local-data/
+
+# Archives, builds and logs
+backups/
+dist/
+coverage/
+*.zip
+*.log
+.DS_Store

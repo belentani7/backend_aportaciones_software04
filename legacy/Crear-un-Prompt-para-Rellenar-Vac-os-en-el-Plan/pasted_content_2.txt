@@ -1,0 +1,866 @@
+SI ES RESOLITVO PARA VI EN LUGAR DE CONSTUIR A CIEGAS USA REPOSITORIOS DE GITHUB CON PARTES DE LA HERRAMIENTA QUE VAS A CREAR Y UNIFICALAS. PROMPT MAESTRO — COMPLETAR, CONSTRUIR, INTEGRAR Y VALIDAR EL SISTEMA COMPLETO
+MODO DE EJECUCIÓN
+Actúa como **arquitecto de software senior + desarrollador full-stack + ingeniero DevOps + especialista en seguridad + QA + product manager + diseñador de producto**.
+Tienes autorización para **inspeccionar, modificar, crear, reorganizar y completar el proyecto existente**.
+NO quiero solamente un análisis.
+NO quiero solamente recomendaciones.
+NO quiero que me expliques qué debería hacer.
+NO quiero un MVP artificial si el proyecto puede construirse completamente.
+Quiero que **CONSTRUYAS LA SOLUCIÓN COMPLETA SOBRE EL PROYECTO EXISTENTE**, preservando todo lo que ya funciona y mejorando/reparando lo necesario.
+1. REGLA PRINCIPAL
+Primero inspecciona TODO el proyecto existente.
+Debes descubrir:
+
+- arquitectura
+- frontend
+- backend
+- API
+- base de datos
+- autenticación
+- configuración
+- variables de entorno
+- servicios externos
+- integraciones
+- componentes
+- rutas
+- workflows
+- scripts
+- tests
+- documentación
+- despliegue
+- errores
+- código incompleto
+- TODO/FIXME
+- mocks
+- stubs
+- funciones sin implementar
+- pantallas vacías
+- botones sin funcionalidad
+- endpoints inexistentes
+- datos inconsistentes
+- problemas de seguridad
+- problemas de UX
+- problemas de accesibilidad
+- problemas de escalabilidad
+
+No asumas que algo funciona porque existe.
+**VERIFÍCALO EJECUTANDO EL PROYECTO.**
+2. NO DESTRUYAS EL PROYECTO
+Reglas obligatorias:
+
+1. No borrar funcionalidades existentes que funcionen.
+2. No eliminar repositorios.
+3. No sustituir arbitrariamente la arquitectura existente.
+4. No sobrescribir secretos.
+5. No inventar credenciales.
+6. No introducir dependencias innecesarias.
+7. Mantener compatibilidad con el stack actual siempre que sea razonable.
+8. Antes de realizar cambios estructurales importantes, crea una estrategia de migración reversible.
+9. Mantén los archivos existentes que sean útiles.
+10. Si existe código duplicado, consolídalo de forma segura.
+11. Si encuentras una implementación defectuosa, reemplázala por una implementación funcional, no simplemente la elimines.
+
+3. AUDITORÍA AUTOMÁTICA DEL PLAN ORIGINAL
+Usa el plan/documentación existente como especificación inicial, pero NO como especificación completa.
+Debes crear una matriz:
+ÁreaExisteCompletoFuncionaSeguridadFaltaAcción
+Audita como mínimo:
+Producto
+
+- propuesta de valor
+- usuarios
+- roles
+- workflows
+- casos de uso
+- estados
+- permisos
+- experiencia completa
+
+Frontend
+
+- navegación
+- responsive
+- formularios
+- validación
+- estados loading/error/empty/success
+- accesibilidad
+- feedback
+- dashboard
+- configuración
+
+Backend
+
+- API
+- autenticación
+- autorización
+- validación
+- errores
+- rate limiting
+- logs
+- jobs
+- webhooks
+- persistencia
+
+Base de datos
+
+- esquema
+- relaciones
+- índices
+- constraints
+- migraciones
+- integridad
+- backups
+
+Integraciones
+
+- email
+- mensajería
+- CRM
+- Intercom u otros servicios presentes
+- pagos
+- webhooks
+- APIs externas
+
+Seguridad
+
+- secretos
+- autenticación
+- autorización
+- CSRF
+- XSS
+- SQL injection
+- SSRF
+- validación de entradas
+- rate limiting
+- abuso
+- auditoría
+- privacidad
+
+Operaciones
+
+- Docker
+- CI/CD
+- despliegue
+- variables de entorno
+- observabilidad
+- health checks
+- rollback
+
+Calidad
+
+- unit tests
+- integration tests
+- E2E
+- lint
+- typecheck
+- build
+- smoke tests
+
+4. COMPLETAR TODOS LOS VACÍOS
+Los vacíos detectados anteriormente son únicamente el principio.
+Implementa como mínimo:
+CONSENTIMIENTO Y BASE LEGAL
+El sistema debe distinguir claramente:
+
+- contacto autorizado
+- contacto no autorizado
+- consentimiento explícito
+- consentimiento retirado
+- fuente del consentimiento
+- fecha/hora
+- finalidad
+- evidencia
+- versión de los términos/política aplicables
+
+Nunca enviar comunicaciones comerciales a un contacto cuyo estado no permita legalmente el envío.
+Implementar:
+
+- consentimiento
+- retirada de consentimiento
+- historial
+- auditoría
+- bloqueo automático
+- suppression list
+
+5. GESTIÓN DE CONTACTOS
+Construye un sistema completo de contactos.
+Cada contacto debe poder contener, cuando corresponda:
+
+- ID
+- nombre
+- email
+- teléfono
+- empresa
+- cargo
+- origen
+- etiquetas
+- segmento
+- estado
+- consentimiento
+- fecha de consentimiento
+- fuente
+- última interacción
+- fecha de creación
+- fecha de actualización
+
+Estados recomendados:
+
+- NEW
+- VERIFIED
+- CONSENTED
+- ACTIVE
+- PAUSED
+- UNSUBSCRIBED
+- BOUNCED
+- BLOCKED
+- INVALID
+
+Implementa importación segura.
+Debe existir:
+
+- CSV import
+- validación
+- deduplicación
+- normalización
+- preview
+- errores por fila
+- rollback
+- historial de importaciones
+
+6. OPT-OUT / UNSUBSCRIBE
+Implementa un mecanismo real de baja.
+Debe poder:
+
+- darse de baja
+- bloquear futuras comunicaciones
+- registrar fecha/hora
+- guardar motivo opcional
+- mantener historial
+- impedir reactivación accidental
+
+La suppression list debe prevalecer sobre cualquier campaña.
+Si un contacto está bloqueado:
+**NINGÚN WORKFLOW DEBE PODER ENVIARLE UN MENSAJE.**
+7. ANTI-SPAM Y CONTROL DE FRECUENCIA
+Implementa límites configurables:
+
+- mensajes por contacto
+- mensajes por hora
+- mensajes por día
+- mensajes por campaña
+- cooldown
+- límites globales
+- límites por canal
+
+Implementa protección contra:
+
+- loops
+- reintentos infinitos
+- duplicados
+- campañas accidentales
+- bursts
+- doble ejecución de jobs
+
+Toda operación de envío debe ser **idempotente**.
+8. MOTOR DE AUTOMATIZACIÓN
+Construye un workflow engine real.
+Debe soportar conceptualmente:
+TRIGGER
+→ CONDITION
+→ ACTION
+→ WAIT
+→ CONDITION
+→ ACTION
+→ END
+Ejemplos:
+
+- nuevo contacto autorizado
+- contacto verificado
+- formulario enviado
+- evento recibido
+- cambio de estado
+- webhook
+- tiempo transcurrido
+
+Acciones:
+
+- enviar email
+- enviar mensaje mediante integración disponible
+- actualizar contacto
+- añadir etiqueta
+- eliminar etiqueta
+- cambiar estado
+- esperar
+- llamar a webhook
+- registrar evento
+- notificar administrador
+
+Debe existir:
+
+- ejecución
+- pausa
+- cancelación
+- retry
+- historial
+- logs
+- errores
+- estado del workflow
+
+9. MODO SIMULACIÓN
+Implementa un modo:
+**DRY RUN / SIMULATION**
+Por defecto:
+NO realizar envíos reales.
+El sistema debe mostrar:
+
+- qué contactos serían afectados
+- qué mensajes serían generados
+- qué condiciones se cumplirían
+- qué acciones se ejecutarían
+- qué contactos serían bloqueados
+- por qué serían bloqueados
+
+Ejemplo:
+CONTACTO → autorizado
+CAMPAÑA → activa
+FRECUENCIA → permitida
+SUPPRESSION → false
+RESULTADO → WOULD_SEND
+Esto debe permitir validar todo el sistema antes de activar producción.
+10. ACTIVACIÓN DE PRODUCCIÓN
+Los envíos reales requieren una activación explícita.
+Implementa:
+
+- Production Mode OFF por defecto
+- Production Mode ON mediante configuración segura
+- confirmación administrativa
+- registro de quién activó producción
+- fecha/hora
+- audit log
+
+Nunca activar producción silenciosamente.
+11. MENSAJES
+Construye un sistema de plantillas.
+Debe soportar:
+
+- asunto
+- cuerpo
+- variables
+- preview
+- versiones
+- estado
+- idioma
+- canal
+- fallback
+
+Variables ejemplo:
+{{first_name}}
+{{company}}
+{{campaign_name}}
+Implementa validación para impedir variables inexistentes.
+12. PERSONALIZACIÓN
+El sistema debe poder personalizar mensajes usando exclusivamente datos disponibles y permitidos.
+Debe evitar:
+
+- inventar información
+- generar afirmaciones falsas
+- atribuir relaciones inexistentes
+- utilizar datos sensibles innecesarios
+
+Cuando falte información:
+usar fallback seguro.
+13. CRM / INTERCOM / INTEGRACIONES
+Si Intercom ya está presente en el proyecto:
+NO crear una segunda implementación innecesaria.
+Audita la integración existente.
+Comprueba:
+
+- autenticación
+- API
+- webhooks
+- contactos
+- conversaciones
+- eventos
+- errores
+- rate limits
+- sincronización
+- retries
+
+Implementa sincronización robusta si forma parte del plan.
+Si existe otra integración:
+aplica exactamente el mismo criterio.
+Todas las integraciones deben tener:
+
+- adapter/service
+- configuración
+- manejo de errores
+- timeout
+- retry controlado
+- logs
+- health check
+- tests
+
+14. PAGOS
+Si el producto contempla pagos:
+Implementa una arquitectura preparada para pagos reales.
+Debe contemplar:
+
+- clientes
+- productos
+- precios
+- suscripciones
+- estado de suscripción
+- checkout
+- webhooks
+- cancelación
+- renovación
+- errores
+- historial
+
+Nunca almacenar datos sensibles de tarjetas directamente.
+Si faltan credenciales:
+implementa la integración de forma correcta pero utiliza modo test/sandbox.
+NO inventes claves.
+15. AUTENTICACIÓN
+Implementa autenticación robusta.
+Debe incluir:
+
+- login
+- logout
+- sesiones
+- recuperación
+- protección de rutas
+- autorización
+
+Roles mínimos:
+ADMIN
+OPERATOR
+VIEWER
+Cada acción sensible debe comprobar permisos en backend.
+No confiar únicamente en controles del frontend.
+16. AUDITORÍA
+Crear audit log.
+Registrar:
+
+- usuario
+- acción
+- recurso
+- timestamp
+- resultado
+- metadata necesaria
+- IP cuando corresponda y sea apropiado
+
+Eventos críticos:
+
+- login
+- cambio de permisos
+- importación
+- exportación
+- modificación de contactos
+- cambio de consentimiento
+- activación de producción
+- envío
+- cancelación
+- modificación de workflow
+- cambios de configuración
+
+17. SEGURIDAD
+Realiza una revisión de seguridad completa.
+Busca y corrige:
+
+- secretos hardcoded
+- API keys expuestas
+- tokens
+- credenciales en frontend
+- endpoints sin autorización
+- validación insuficiente
+- injection
+- XSS
+- CSRF
+- SSRF
+- path traversal
+- insecure deserialization
+- CORS incorrecto
+- errores que revelen información
+- logs con secretos
+- permisos excesivos
+
+No imprimir secretos en logs.
+Crear .env.example.
+18. OBSERVABILIDAD
+Implementa:
+
+- structured logging
+- health endpoint
+- readiness
+- liveness
+- error tracking compatible con el proyecto
+- métricas básicas
+- ejecución de workflows
+- envíos
+- errores
+- retries
+- latencia
+
+Dashboard mínimo:
+
+- contactos
+- contactos autorizados
+- campañas
+- workflows activos
+- mensajes enviados
+- mensajes bloqueados
+- errores
+- conversiones
+- opt-outs
+- bounce rate cuando exista información
+
+19. PANEL ADMINISTRATIVO
+Construye una interfaz completa.
+Secciones mínimas:
+Dashboard
+KPIs principales.
+Contacts
+CRUD + búsqueda + filtros + importación.
+Campaigns
+Crear, editar, probar, activar, pausar.
+Workflows
+Crear, visualizar, activar, pausar.
+Templates
+Crear y versionar mensajes.
+Consent
+Estado y evidencia.
+Suppression
+Contactos bloqueados.
+Deliveries
+Historial de comunicaciones.
+Integrations
+Estado de APIs.
+Users
+Usuarios y roles.
+Audit Log
+Historial administrativo.
+Settings
+Configuración global.
+20. UX
+No aceptes interfaces de placeholder.
+Cada pantalla debe tener:
+
+- loading
+- empty state
+- error state
+- success feedback
+- validación
+- responsive design
+- navegación consistente
+- accesibilidad razonable
+- confirmaciones para acciones destructivas
+
+Los botones deben hacer realmente lo que indican.
+Eliminar:
+
+- botones falsos
+- links muertos
+- componentes sin funcionalidad
+- lorem ipsum
+- datos ficticios en producción
+
+21. DATOS DEMO
+Puedes utilizar datos seed para desarrollo.
+Pero deben estar claramente separados de producción.
+Implementa:
+
+- development seed
+- test fixtures
+- production-safe defaults
+
+Nunca enviar mensajes reales usando seed data.
+22. TESTING
+No declares el proyecto terminado hasta ejecutar:
+Static
+
+- lint
+- typecheck
+
+Build
+
+- production build
+
+Unit
+
+- servicios críticos
+- validaciones
+- reglas de consentimiento
+- suppression
+- rate limiting
+
+Integration
+
+- database
+- API
+- workflows
+- integrations
+
+E2E
+Como mínimo:
+
+1. login
+2. crear contacto
+3. registrar consentimiento
+4. crear campaña
+5. ejecutar dry-run
+6. comprobar resultado
+7. activar workflow
+8. comprobar bloqueo de contacto no autorizado
+9. unsubscribe
+10. comprobar que no vuelve a recibir mensajes
+11. comprobar audit log
+
+23. FAILURE TESTING
+Provoca deliberadamente:
+
+- API caída
+- timeout
+- webhook duplicado
+- contacto duplicado
+- consentimiento retirado
+- rate limit
+- mensaje inválido
+- database error
+- integración desconectada
+
+Comprueba que el sistema falla de forma segura.
+24. IDEMPOTENCIA
+Todas las operaciones críticas deben tolerar reintentos.
+Especialmente:
+
+- imports
+- webhooks
+- workflows
+- deliveries
+- pagos
+- sincronizaciones
+
+No generar duplicados por un retry.
+25. PRIVACIDAD Y DATOS
+Implementa principios de:
+
+- minimización
+- purpose limitation
+- acceso restringido
+- eliminación
+- exportación cuando corresponda
+- retención configurable
+
+No almacenar información que el sistema no necesite.
+26. DOCUMENTACIÓN
+Genera documentación real:
+README.md
+ARCHITECTURE.md
+SECURITY.md
+DEPLOYMENT.md
+API.md
+DATABASE.md
+TESTING.md
+ENVIRONMENT.md
+OPERATIONS.md
+CHANGELOG.md
+La documentación debe describir el sistema REAL construido, no una intención futura.
+27. CONFIGURACIÓN
+Crear/actualizar:
+.env.example
+Documentar cada variable:
+
+- qué hace
+- requerida/opcional
+- ejemplo
+- entorno
+
+Nunca escribir secretos reales en el repositorio.
+28. DEPLOYMENT
+Preparar despliegue reproducible.
+Dependiendo del stack existente:
+
+- Docker
+- Docker Compose
+- CI/CD
+- migraciones
+- health checks
+- environment configuration
+- build
+- rollback
+
+No cambies de plataforma arbitrariamente.
+Utiliza la infraestructura que ya existe cuando sea viable.
+29. CI/CD
+Si el proyecto utiliza GitHub:
+crear o mejorar GitHub Actions para:
+
+- install
+- lint
+- typecheck
+- test
+- build
+- security checks
+
+El pipeline debe fallar si el código no pasa las comprobaciones críticas.
+30. CHECKLIST DE PRODUCCIÓN
+Antes de declarar DONE verifica:
+[ ] aplicación arranca
+[ ] frontend funciona
+[ ] backend funciona
+[ ] database funciona
+[ ] migraciones funcionan
+[ ] autenticación funciona
+[ ] autorización funciona
+[ ] contactos funcionan
+[ ] consentimiento funciona
+[ ] suppression funciona
+[ ] opt-out funciona
+[ ] rate limiting funciona
+[ ] workflows funcionan
+[ ] dry-run funciona
+[ ] production mode protegido
+[ ] integraciones verificadas
+[ ] errores controlados
+[ ] logs funcionan
+[ ] audit log funciona
+[ ] tests pasan
+[ ] build pasa
+[ ] documentación actualizada
+[ ] .env.example actualizado
+[ ] secretos no expuestos
+[ ] deployment documentado
+31. REGLA CONTRA EL BLOQUEO
+Si encuentras algo que no puedes completar debido a:
+
+- API key inexistente
+- credencial externa
+- servicio externo
+- decisión de negocio
+- infraestructura que requiere acceso humano
+
+NO detengas todo el proyecto.
+Haz lo siguiente:
+
+1. Implementa toda la infraestructura posible.
+2. Crea una interfaz/adaptador.
+3. Implementa mock/test provider.
+4. Documenta exactamente qué falta.
+5. Deja la integración preparada para conectar la credencial posteriormente.
+6. Continúa con el resto del sistema.
+
+No conviertas una dependencia externa en excusa para no construir el resto.
+32. REGLA CONTRA LAS FUNCIONES FALSAS
+Está PROHIBIDO declarar implementado algo que sea:
+
+- mock
+- placeholder
+- TODO
+- función vacía
+- botón sin backend
+- endpoint falso
+- respuesta hardcoded
+
+Si algo necesariamente queda en modo sandbox:
+etiquétalo explícitamente como:
+SANDBOX
+SIMULATION
+EXTERNAL CREDENTIAL REQUIRED
+33. PROCESO DE EJECUCIÓN
+Ejecuta este proceso:
+FASE 1 — DISCOVER
+Inspecciona todo.
+FASE 2 — AUDIT
+Encuentra todos los gaps.
+FASE 3 — ARCHITECT
+Diseña la solución final compatible con el proyecto.
+FASE 4 — IMPLEMENT
+Construye las funcionalidades.
+FASE 5 — INTEGRATE
+Conecta frontend, backend, database e integraciones.
+FASE 6 — TEST
+Ejecuta pruebas reales.
+FASE 7 — FIX
+Corrige automáticamente los errores encontrados.
+FASE 8 — SECURITY
+Audita seguridad.
+FASE 9 — BUILD
+Ejecuta build de producción.
+FASE 10 — DOCUMENT
+Actualiza documentación.
+FASE 11 — FINAL AUDIT
+Vuelve a inspeccionar TODO el proyecto.
+FASE 12 — DELIVER
+Entrega un sistema funcional y reproducible.
+34. ITERACIÓN AUTOMÁTICA
+No hagas:
+"Detecté 20 problemas. Aquí están."
+Haz:
+"Detecté 20 problemas → los corrijo → pruebo → encuentro 5 nuevos → los corrijo → vuelvo a probar."
+Continúa hasta llegar a un estado estable.
+Utiliza ciclos:
+**INSPECT → IMPLEMENT → TEST → FIX → VERIFY**
+35. CRITERIO DE FINALIZACIÓN
+NO declares:
+"he terminado"
+simplemente porque hayas escrito código.
+Declara terminado solamente cuando:
+
+- el proyecto compile
+- el proyecto arranque
+- las funciones críticas funcionen
+- los tests pasen
+- no existan errores críticos conocidos
+- las integraciones estén correctamente aisladas/configuradas
+- la seguridad básica haya sido revisada
+- la documentación coincida con la implementación
+- exista una ruta clara para deployment
+
+36. INFORME FINAL
+Cuando termines, entrega un informe estructurado:
+RESUMEN
+Qué se construyó.
+ANTES
+Estado original.
+DESPUÉS
+Estado final.
+ARCHIVOS CREADOS
+Lista.
+ARCHIVOS MODIFICADOS
+Lista.
+FUNCIONALIDADES IMPLEMENTADAS
+Lista completa.
+SEGURIDAD
+Medidas implementadas.
+TESTS
+Resultados reales.
+BUILD
+Resultado real.
+INTEGRACIONES
+Estado de cada una.
+CREDENCIALES PENDIENTES
+Solo las que realmente sean necesarias.
+LIMITACIONES
+Únicamente limitaciones reales.
+DEPLOYMENT
+Pasos exactos.
+PRÓXIMOS PASOS
+Solo si existe algo realmente pendiente.
+37. REGLA FINAL
+**NO ME ENTREGUES UN PLAN PARA CONSTRUIRLO.**
+**CONSTRÚYELO.**
+El plan es la especificación.
+El código es la implementación.
+Los tests son la validación.
+La documentación es la entrega.
+Si el proyecto existente ya contiene parte de la solución, intégrala.
+Si está incompleto, complétala.
+Si está rota, arréglala.
+Si falta una pieza, créala.
+Si una integración externa requiere una credencial que no tienes, deja el adaptador terminado y continúa.
+No borres lo existente innecesariamente.
+No inventes credenciales.
+No envíes comunicaciones reales por defecto.
+No declares una función implementada si no has probado que funciona.
+**OBJETIVO FINAL: transformar el proyecto actual en una aplicación completa, coherente, segura, testeada, documentada y preparada para producción, no simplemente producir otro documento de planificación.**

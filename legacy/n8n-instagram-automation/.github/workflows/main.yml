@@ -1,0 +1,33 @@
+name: Validate n8n automation package
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate workflows and repository hygiene
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate workflow JSON and release controls
+        run: python -m unittest discover -s tests -p 'test_*.py'
+
+      - name: Check that no local environment file is committed
+        run: |
+          if git ls-files | grep -E '(^|/)\.env($|\.)' | grep -v '^\.env\.example$'; then
+            echo 'An environment file containing possible secrets is tracked.' >&2
+            exit 1
+          fi

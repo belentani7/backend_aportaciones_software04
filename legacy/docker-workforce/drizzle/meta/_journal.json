@@ -1,0 +1,55 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1784845988762,
+      "tag": "0000_jazzy_richard_fisk",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1787048121162,
+      "tag": "0001_oval_chimera",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1787048276008,
+      "tag": "0002_nervous_omega_red",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1787049170575,
+      "tag": "0003_nostalgic_piledriver",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1787050343822,
+      "tag": "0004_tired_gamma_corps",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1787050440636,
+      "tag": "0005_nifty_venus",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1787050841498,
+      "tag": "0006_aspiring_the_enforcers",
+      "breakpoints": true
+    }
+  ]
+}

@@ -1,0 +1,322 @@
+{
+  "source": "drizzle/schema.ts",
+  "actual": "/tmp/docker-db-introspection-types-final/schema.ts",
+  "tables": [
+    {
+      "table": "absences",
+      "expected": 24,
+      "observed": 24,
+      "missing": [],
+      "extra": [],
+      "typeMismatches": [],
+      "expectedIndexes": [
+        "absences_tenantId_idx",
+        "absences_employeeId_idx",
+        "absences_type_idx",
+        "absences_status_idx"
+      ],
+      "observedIndexes": [
+        "absences_tenantId_idx",
+        "absences_employeeId_idx",
+        "absences_type_idx",
+        "absences_status_idx"
+      ],
+      "missingIndexes": [],
+      "extraIndexes": []
+    },
+    {
+      "table": "auditLogs",
+      "expected": 19,
+      "observed": 19,
+      "missing": [],
+      "extra": [],
+      "typeMismatches": [],
+      "expectedIndexes": [
+        "auditLogs_tenantId_idx",
+        "auditLogs_resourceType_resourceId_idx",
+        "auditLogs_action_idx",
+        "auditLogs_hash_idx"
+      ],
+      "observedIndexes": [
+        "auditLogs_tenantId_idx",
+        "auditLogs_resourceType_resourceId_idx",
+        "auditLogs_action_idx",
+        "auditLogs_hash_idx"
+      ],
+      "missingIndexes": [],
+      "extraIndexes": []
+    },
+    {
+      "table": "complianceRuleVersions",
+      "expected": 16,
+      "observed": 16,
+      "missing": [],
+      "extra": [],
+      "typeMismatches": [],
+      "expectedIndexes": [
+        "complianceRuleVersions_ruleId_idx",
+        "complianceRuleVersions_jurisdiction_idx",
+        "complianceRuleVersions_status_idx"
+      ],
+      "observedIndexes": [
+        "complianceRuleVersions_ruleId_idx",
+        "complianceRuleVersions_jurisdiction_idx",
+        "complianceRuleVersions_status_idx"
+      ],
+      "missingIndexes": [],
+      "extraIndexes": []
+    },
+    {
+      "table": "complianceViolations",
+      "expected": 15,
+      "observed": 15,
+      "missing": [],
+      "extra": [],
+      "typeMismatches": [],
+      "expectedIndexes": [
+        "complianceViolations_tenantId_idx",
+        "complianceViolations_employeeId_idx",
+        "complianceViolations_ruleId_idx"
+      ],
+      "observedIndexes": [
+        "complianceViolations_tenantId_idx",
+        "complianceViolations_employeeId_idx",
+        "complianceViolations_ruleId_idx"
+      ],
+      "missingIndexes": [],
+      "extraIndexes": []
+    },
+    {
+      "table": "domainEvents",
+      "expected": 9,
+      "observed": 9,
+      "missing": [],
+      "extra": [],
+      "typeMismatches": [],
+      "expectedIndexes": [
+        "domainEvents_tenantId_idx",
+        "domainEvents_aggregateType_aggregateId_idx",
+        "domainEvents_eventType_idx"
+      ],
+      "observedIndexes": [
+        "domainEvents_tenantId_idx",
+        "domainEvents_aggregateType_aggregateId_idx",
+        "domainEvents_eventType_idx"
+      ],
+      "missingIndexes": [],
+      "extraIndexes": []
+    },
+    {
+      "table": "employees",
+      "expected": 23,
+      "observed": 23,
+      "missing": [],
+      "extra": [],
+      "typeMismatches": [],
+      "expectedIndexes": [
+        "employees_tenantId_idx",
+        "employees_email_unique",
+        "employees_active_idx"
+      ],
+      "observedIndexes": [
+        "employees_email_unique",
+        "employees_tenantId_idx",
+        "employees_active_idx"
+      ],
+      "missingIndexes": [],
+      "extraIndexes": []
+    },
+    {
+      "table": "featureFlags",
+      "expected": 9,
+      "observed": 9,
+      "missing": [],
+      "extra": [],
+      "typeMismatches": [],
+      "expectedIndexes": [
+        "featureFlags_tenantId_flagName_idx"
+      ],
+      "observedIndexes": [
+        "featureFlags_tenantId_flagName_idx"
+      ],
+      "missingIndexes": [],
+      "extraIndexes": []
+    },
+    {
+      "table": "payrollAdjustments",
+      "expected": 8,
+      "observed": 8,
+      "missing": [],
+      "extra": [],
+      "typeMismatches": [],
+      "expectedIndexes": [
+        "payrollAdjustments_tenantId_idx",
+        "payrollAdjustments_payrollId_idx"
+      ],
+      "observedIndexes": [
+        "payrollAdjustments_tenantId_idx",
+        "payrollAdjustments_payrollId_idx"
+      ],
+      "missingIndexes": [],
+      "extraIndexes": []
+    },
+    {
+      "table": "payrollRules",
+      "expected": 9,
+      "observed": 9,
+      "missing": [],
+      "extra": [],
+      "typeMismatches": [],
+      "expectedIndexes": [
+        "payrollRules_tenantId_idx"
+      ],
+      "observedIndexes": [
+        "payrollRules_tenantId_idx"
+      ],
+      "missingIndexes": [],
+      "extraIndexes": []
+    },
+    {
+      "table": "payrolls",
+      "expected": 27,
+      "observed": 27,
+      "missing": [],
+      "extra": [],
+      "typeMismatches": [],
+      "expectedIndexes": [
+        "payrolls_tenantId_idx",
+        "payrolls_employeeId_idx",
+        "payrolls_period_idx",
+        "payrolls_status_idx"
+      ],
+      "observedIndexes": [
+        "payrolls_tenantId_idx",
+        "payrolls_employeeId_idx",
+        "payrolls_period_idx",
+        "payrolls_status_idx"
+      ],
+      "missingIndexes": [],
+      "extraIndexes": []
+    },
+    {
+      "table": "rtaEvents",
+      "expected": 9,
+      "observed": 9,
+      "missing": [],
+      "extra": [],
+      "typeMismatches": [],
+      "expectedIndexes": [
+        "rtaEvents_tenantId_idx",
+        "rtaEvents_employeeId_idx",
+        "rtaEvents_eventTime_idx"
+      ],
+      "observedIndexes": [
+        "rtaEvents_tenantId_idx",
+        "rtaEvents_employeeId_idx",
+        "rtaEvents_eventTime_idx"
+      ],
+      "missingIndexes": [],
+      "extraIndexes": []
+    },
+    {
+      "table": "sessions",
+      "expected": 8,
+      "observed": 8,
+      "missing": [],
+      "extra": [],
+      "typeMismatches": [],
+      "expectedIndexes": [
+        "sessions_userId_idx",
+        "sessions_tenantId_idx"
+      ],
+      "observedIndexes": [
+        "sessions_userId_idx",
+        "sessions_tenantId_idx"
+      ],
+      "missingIndexes": [],
+      "extraIndexes": []
+    },
+    {
+      "table": "shifts",
+      "expected": 19,
+      "observed": 19,
+      "missing": [],
+      "extra": [],
+      "typeMismatches": [],
+      "expectedIndexes": [
+        "shifts_tenantId_idx",
+        "shifts_employeeId_idx",
+        "shifts_startTime_idx",
+        "shifts_status_idx"
+      ],
+      "observedIndexes": [
+        "shifts_tenantId_idx",
+        "shifts_employeeId_idx",
+        "shifts_startTime_idx",
+        "shifts_status_idx"
+      ],
+      "missingIndexes": [],
+      "extraIndexes": []
+    },
+    {
+      "table": "tenants",
+      "expected": 16,
+      "observed": 16,
+      "missing": [],
+      "extra": [],
+      "typeMismatches": [],
+      "expectedIndexes": [
+        "tenants_slug_idx",
+        "tenants_active_idx",
+        "tenants_slug_unique"
+      ],
+      "observedIndexes": [
+        "tenants_slug_unique",
+        "tenants_slug_idx",
+        "tenants_active_idx"
+      ],
+      "missingIndexes": [],
+      "extraIndexes": []
+    },
+    {
+      "table": "userTenantRoles",
+      "expected": 8,
+      "observed": 8,
+      "missing": [],
+      "extra": [],
+      "typeMismatches": [],
+      "expectedIndexes": [
+        "userTenantRoles_user_tenant_unique",
+        "userTenantRoles_tenantId_idx",
+        "userTenantRoles_role_idx"
+      ],
+      "observedIndexes": [
+        "userTenantRoles_tenantId_idx",
+        "userTenantRoles_role_idx",
+        "userTenantRoles_user_tenant_unique"
+      ],
+      "missingIndexes": [],
+      "extraIndexes": []
+    },
+    {
+      "table": "users",
+      "expected": 15,
+      "observed": 15,
+      "missing": [],
+      "extra": [],
+      "typeMismatches": [],
+      "expectedIndexes": [
+        "users_email_idx",
+        "users_openId_unique",
+        "users_email_unique"
+      ],
+      "observedIndexes": [
+        "users_openId_unique",
+        "users_email_idx",
+        "users_email_unique"
+      ],
+      "missingIndexes": [],
+      "extraIndexes": []
+    }
+  ]
+}

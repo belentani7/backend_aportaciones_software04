@@ -1,0 +1,1 @@
+ALTER TABLE `shifts` MODIFY COLUMN `status` enum('scheduled','published','completed','missed','cancelled') DEFAULT 'scheduled';

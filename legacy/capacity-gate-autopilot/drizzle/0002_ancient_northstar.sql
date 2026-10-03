@@ -1,0 +1,2 @@
+ALTER TABLE `capacity_requests` ADD `duplicateDetected` boolean DEFAULT false NOT NULL;--> statement-breakpoint
+ALTER TABLE `auto_responses` ADD CONSTRAINT `auto_responses_owner_outcome_unique` UNIQUE(`ownerId`,`outcome`);

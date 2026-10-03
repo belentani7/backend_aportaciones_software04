@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HARMONÍA · Operations Hub</title>
+    <link rel="stylesheet" href="/crm/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">BELENTANI / HARMONÍA</p>
+          <h1>Operations Hub</h1>
+          <p class="muted">CRM y ejecución durable con validación PVC-U.</p>
+        </div>
+        <div class="top-actions">
+          <span id="auth-status" class="status-pill">Comprobando sesión…</span>
+          <button id="refresh" class="button secondary">Actualizar</button>
+        </div>
+      </header>
+
+      <section id="login-panel" class="notice hidden">
+        <strong>Sesión necesaria</strong>
+        <span>Abre BELENTANI y autentícate para gestionar tus contactos y automatizaciones.</span>
+      </section>
+
+      <section class="metrics" aria-label="Resumen">
+        <article class="metric-card"><span>Contactos</span><strong id="contact-count">—</strong></article>
+        <article class="metric-card"><span>Jobs activos</span><strong id="job-count">—</strong></article>
+        <article class="metric-card"><span>Última ejecución</span><strong id="last-run">—</strong></article>
+      </section>
+
+      <section class="grid two-col">
+        <article class="panel">
+          <div class="panel-heading"><div><p class="eyebrow">PIPELINE</p><h2>Contactos y leads</h2></div><button id="new-contact" class="button primary">Nuevo contacto</button></div>
+          <form id="contact-form" class="form hidden">
+            <input name="name" placeholder="Nombre" required minlength="2" />
+            <input name="email" type="email" placeholder="Email" required />
+            <select name="status"><option value="lead">Lead</option><option value="customer">Cliente</option><option value="churned">Churned</option></select>
+            <input name="value" inputmode="decimal" placeholder="Valor (€)" value="0.00" />
+            <button class="button primary" type="submit">Guardar</button>
+          </form>
+          <div id="contacts" class="table-wrap"><p class="muted">Cargando…</p></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-heading"><div><p class="eyebrow">DURABLE EXECUTION</p><h2>Automatizaciones</h2></div></div>
+          <div id="jobs" class="stack"><p class="muted">Cargando…</p></div>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading"><div><p class="eyebrow">PVC-U VALIDATION LEDGER</p><h2>Historial de ejecuciones</h2></div></div>
+        <div id="runs" class="table-wrap"><p class="muted">Cargando…</p></div>
+      </section>
+
+      <section id="governance-panel" class="panel hidden">
+        <div class="panel-heading"><div><p class="eyebrow">OWNER GOVERNANCE</p><h2>Control HARMONÍA</h2><p class="muted">El kill switch bloquea commits nuevos antes de la fase de confirmación PVC-U.</p></div><button id="kill-switch" class="button danger">Activar kill switch</button></div>
+        <div class="metrics governance-metrics"><article class="metric-card"><span>Estado</span><strong id="kill-status">—</strong></article><article class="metric-card"><span>Última actualización</span><strong id="kill-updated">—</strong></article><article class="metric-card"><span>Entradas PVC-U</span><strong id="ledger-count">—</strong></article></div>
+        <div id="governance-audit" class="table-wrap"><p class="muted">Cargando auditoría…</p></div>
+      </section>
+    </main>
+    <script src="/crm/app.js" defer></script>
+  </body>
+</html>

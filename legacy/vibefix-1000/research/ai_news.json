@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://llm-stats.com",
+    "name": "AI Updates Today (September 2026) – Latest AI Model",
+    "snippet": "Track recent AI model releases, API changes, pricing updates , and feature launches across the major model providers in one daily changelog.",
+    "host_name": "llm-stats.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.anthropic.com",
+    "name": "Newsroom",
+    "snippet": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+    "host_name": "www.anthropic.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.deeplearning.ai",
+    "name": "Power Moves in AI Coding, Moonshot's Agentic LLM, How",
+    "snippet": "Jul 23, 2025 — A small but growing group is now orchestrating multiple AI agents ... Stay updated with weekly AI News and Insights delivered to your inbox. Read more",
+    "host_name": "www.deeplearning.ai",
+    "rank": 2,
+    "date": "Jul 23, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.tldl.io",
+    "name": "AI News & Updates 2026 - TLDL",
+    "snippet": "May 21, 2026 — Codex (OpenAI's coding agent) successfully hacked a Samsung TV ; Demonstrates security implications of AI coding agents; 109 points on Hacker ... Read more",
+    "host_name": "www.tldl.io",
+    "rank": 3,
+    "date": "May 21, 2026",
+    "favicon": ""
+  }
+]

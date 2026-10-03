@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://stackoverflow.blog",
+    "name": "A new worst coder has entered the chat: vibe coding",
+    "snippet": "Jan 2, 2026 — “ Vibe coding ” as a concept only emerged in early 2025 , ed a lot of debate on its effectiveness as a tool for coding and a lot of anxiety over ...",
+    "host_name": "stackoverflow.blog",
+    "rank": 0,
+    "date": "Jan 2, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://news.ycombinator.com",
+    "name": "The problem with \"vibe coding\"",
+    "snippet": "Apr 15, 2025 — If you gave this project to experienced software developers it would be heavy on process and light on impact, take forever to make, and stupid ... Read more",
+    "host_name": "news.ycombinator.com",
+    "rank": 1,
+    "date": "Apr 15, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://arxiv.org",
+    "name": "Vibe Coding in Practice: Motivations, Challenges, and a",
+    "snippet": "Sep 30, 2025 — vibe coding lowers barriers and accelerates development , it also introduces concerns regarding quality, security, and maintainability. Some ...",
+    "host_name": "arxiv.org",
+    "rank": 2,
+    "date": "Sep 30, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://shiftmag.dev",
+    "name": "Vibe Coding Mistakes you can easily avoid",
+    "snippet": "Apr 29, 2026 — What are the biggest risks of vibe coding? The main risks are shipping code you don't understand , accumulating security gaps from unvalidated ... Read more",
+    "host_name": "shiftmag.dev",
+    "rank": 3,
+    "date": "Apr 29, 2026",
+    "favicon": ""
+  }
+]

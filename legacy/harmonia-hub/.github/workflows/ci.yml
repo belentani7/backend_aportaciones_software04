@@ -1,0 +1,54 @@
+name: HARMONÍA CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: harmonia-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: Quality, security and package checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install locked dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Type check
+        run: pnpm exec tsc --noEmit --pretty false --incremental false
+
+      - name: Lint application and server
+        run: pnpm exec eslint app components lib server --ext .ts,.tsx
+
+      - name: Build standalone API
+        run: pnpm build
+
+      - name: Validate Docker composition
+        run: docker compose config --quiet
+
+      - name: Run critical protocol suite
+        run: >-
+          pnpm exec vitest run
+          tests/harmonia.clipper.test.ts
+          tests/harmonia.pvcu.test.ts
+          tests/harmonia.durable.test.ts
+          tests/fullstack.integration.test.ts
+          tests/playlist.validation.test.ts
+          tests/security.core.test.ts
+          --pool=forks
+          --poolOptions.forks.singleFork=true

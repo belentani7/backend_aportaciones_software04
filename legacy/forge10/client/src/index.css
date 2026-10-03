@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --font-sans: "Manrope", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "DM Mono", monospace;
+  --color-background: #071013;
+  --color-foreground: #edfafa;
+  --color-card: #0d1a1d;
+  --color-card-foreground: #edfafa;
+  --color-popover: #0d1a1d;
+  --color-popover-foreground: #edfafa;
+  --color-primary: #b8fff2;
+  --color-primary-foreground: #071013;
+  --color-secondary: #13272a;
+  --color-secondary-foreground: #d9fffa;
+  --color-muted: #132124;
+  --color-muted-foreground: #8ba2a4;
+  --color-accent: #173437;
+  --color-accent-foreground: #edfafa;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-input: rgba(255, 255, 255, 0.1);
+  --color-ring: #67e8f9;
+  --radius: 1rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    background: #071013;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "Manrope", sans-serif;
+  }
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+  button:focus-visible,
+  a:focus-visible {
+    outline: 2px solid #67e8f9;
+    outline-offset: 3px;
+  }
+}
+
+.font-display {
+  font-family: "Space Grotesk", sans-serif;
+}
+.font-mono {
+  font-family: "DM Mono", monospace;
+}
+::selection {
+  background: rgba(165, 243, 252, 0.25);
+  color: #f0ffff;
+}

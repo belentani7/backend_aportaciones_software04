@@ -1,0 +1,94 @@
+import { useAuth } from "@/_core/hooks/useAuth";
+import { startLogin } from "@/const";
+import DashboardLayout from "@/components/DashboardLayout";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { trpc } from "@/lib/trpc";
+import { Activity, ArrowUpRight, CheckCircle2, ChevronRight, CircleAlert, ClipboardCheck, Euro, FlaskConical, Mail, Plus, ShieldCheck, Sparkles, UserPlus, Users, XCircle } from "lucide-react";
+import { ChangeEvent, FormEvent, useState } from "react";
+import { toast } from "sonner";
+
+const previewStats = [
+  { label: "Leads en workspace", value: "128", detail: "+18 esta semana", icon: Users, color: "text-cyan-600" },
+  { label: "Consentidos", value: "76%", detail: "evidencia registrada", icon: ShieldCheck, color: "text-emerald-600" },
+  { label: "Citas atribuidas", value: "14", detail: "últimos 30 días", icon: ClipboardCheck, color: "text-violet-600" },
+  { label: "Ingresos atribuidos", value: "€2.480", detail: "modo demostración", icon: Euro, color: "text-amber-600" },
+];
+
+function money(cents: number) {
+  return new Intl.NumberFormat("es-ES", { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(cents / 100);
+}
+
+function statusLabel(status: string) {
+  return { new: "Nuevo", queued: "En cola", contacted: "Contactado", replied: "Respondió", qualified: "Cualificado", booked: "Cita", converted: "Convertido", disqualified: "Descartado" }[status] ?? status;
+}
+
+function consentLabel(status: string, blocked: boolean) {
+  if (blocked || status === "revoked") return "Bloqueado";
+  return { verified: "Verificado", pending: "Pendiente", unknown: "Sin prueba" }[status] ?? status;
+}
+
+function Intro() {
+  return (
+    <div className="min-h-screen bg-[#f6f8fb] text-slate-950">
+      <header className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-10">
+        <div className="flex items-center gap-3"><div className="grid size-9 place-items-center rounded-xl bg-slate-950 text-white"><Sparkles className="size-4" /></div><span className="font-semibold tracking-tight">Consent Lead Engine</span></div>
+        <Button onClick={() => startLogin()} className="rounded-full px-5">Entrar</Button>
+      </header>
+      <main className="mx-auto max-w-7xl px-6 pb-16 pt-12 lg:px-10 lg:pt-20">
+        <div className="grid items-end gap-12 lg:grid-cols-[1.15fr_.85fr]">
+          <div><div className="mb-5 inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700"><span className="size-1.5 rounded-full bg-emerald-500" /> Producción protegida por defecto</div><h1 className="max-w-3xl text-5xl font-semibold leading-[1.03] tracking-[-0.05em] sm:text-7xl">Captación que crece <span className="text-cyan-600">sin saltarse la confianza.</span></h1><p className="mt-7 max-w-xl text-lg leading-8 text-slate-600">Un centro de operaciones para gestionar contactos autorizados, campañas trazables y citas atribuidas. Primero simula. Luego decides.</p><div className="mt-9 flex flex-wrap gap-3"><Button size="lg" onClick={() => startLogin()} className="rounded-full px-6">Abrir workspace <ArrowUpRight className="size-4" /></Button><a href="#guardrails" className="inline-flex h-10 items-center rounded-full border border-slate-200 bg-white px-5 text-sm font-medium hover:bg-slate-50">Ver guardrails</a></div></div>
+          <Card className="overflow-hidden rounded-[2rem] border-0 bg-slate-950 text-white shadow-2xl shadow-slate-200"><CardContent className="p-7"><div className="flex items-center justify-between"><div><p className="text-sm text-slate-400">Vista de ejemplo</p><p className="mt-1 text-xl font-medium">Dentista Barcelona</p></div><div className="rounded-full bg-amber-300/15 px-3 py-1 text-xs font-medium text-amber-200"><FlaskConical className="mr-1 inline size-3" /> SIMULATION</div></div><div className="mt-8 grid grid-cols-2 gap-3">{previewStats.map(({ label, value, detail, icon: Icon, color }) => <div key={label} className="rounded-2xl bg-white/7 p-4"><Icon className={`size-4 ${color}`} /><p className="mt-5 text-2xl font-semibold">{value}</p><p className="mt-1 text-xs text-slate-300">{label}</p><p className="mt-2 text-[11px] text-slate-500">{detail}</p></div>)}</div><div className="mt-4 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-300"><CheckCircle2 className="mr-2 inline size-4 text-emerald-400" /> Ningún contacto sin consentimiento entra en la cola.</div></CardContent></Card>
+        </div>
+        <section id="guardrails" className="mt-24 grid gap-4 sm:grid-cols-3"><div className="rounded-3xl bg-white p-6 shadow-sm"><ShieldCheck className="size-5 text-emerald-600" /><h3 className="mt-6 font-semibold">Consentimiento primero</h3><p className="mt-2 text-sm leading-6 text-slate-600">Fuente, evidencia, fecha y retirada quedan asociados a cada contacto.</p></div><div className="rounded-3xl bg-white p-6 shadow-sm"><FlaskConical className="size-5 text-cyan-600" /><h3 className="mt-6 font-semibold">Dry-run real</h3><p className="mt-2 text-sm leading-6 text-slate-600">Previsualiza destinatarios, mensajes y bloqueos sin enviar nada.</p></div><div className="rounded-3xl bg-white p-6 shadow-sm"><Activity className="size-5 text-violet-600" /><h3 className="mt-6 font-semibold">Atribución clara</h3><p className="mt-2 text-sm leading-6 text-slate-600">Mensajes, respuestas y citas se conectan para saber qué funciona.</p></div></section>
+      </main>
+    </div>
+  );
+}
+
+function Dashboard() {
+  const { data, isLoading, isError, refetch } = trpc.leadEngine.dashboard.useQuery(undefined, { retry: false });
+  const utils = trpc.useUtils();
+  const [showLeadForm, setShowLeadForm] = useState(false);
+  const [showCampaignForm, setShowCampaignForm] = useState(false);
+  const [showImport, setShowImport] = useState(false);
+  const [csvText, setCsvText] = useState("");
+  const [leadForm, setLeadForm] = useState({ name: "", email: "", source: "Formulario propio", consentProof: "" });
+  const [campaignForm, setCampaignForm] = useState({ name: "", subject: "", bodyTemplate: "Hola {{name}}, soy el equipo de {{businessName}}. ¿Te gustaría reservar una primera conversación? Responde BAJA para no recibir más mensajes." });
+  const createLead = trpc.leadEngine.createLead.useMutation({ onSuccess: () => { toast.success("Lead guardado en estado pendiente"); setShowLeadForm(false); setLeadForm({ name: "", email: "", source: "Formulario propio", consentProof: "" }); utils.leadEngine.dashboard.invalidate(); }, onError: error => toast.error(error.message) });
+  const createCampaign = trpc.leadEngine.createCampaign.useMutation({ onSuccess: () => { toast.success("Campaña creada en modo simulation"); setShowCampaignForm(false); utils.leadEngine.dashboard.invalidate(); }, onError: error => toast.error(error.message) });
+  const runSimulation = trpc.leadEngine.runSimulation.useMutation({ onSuccess: result => { toast.success(`${result.processed} mensajes simulados; no se ha enviado nada`); utils.leadEngine.dashboard.invalidate(); }, onError: error => toast.error(error.message) });
+  const updateStatus = trpc.leadEngine.updateLeadStatus.useMutation({ onSuccess: () => { toast.success("Estado actualizado"); utils.leadEngine.dashboard.invalidate(); }, onError: error => toast.error(error.message) });
+  const importCsv = trpc.leadEngine.importCsv.useMutation({ onSuccess: result => { toast.success(`${result.created} leads importados; ${result.skipped} filas omitidas`); setCsvText(""); setShowImport(false); utils.leadEngine.dashboard.invalidate(); }, onError: error => toast.error(error.message) });
+
+  if (isLoading) return <div className="grid min-h-[70vh] place-items-center"><div className="text-center"><Activity className="mx-auto size-6 animate-pulse text-cyan-600" /><p className="mt-3 text-sm text-slate-500">Cargando workspace…</p></div></div>;
+  if (isError || !data) return <div className="mx-auto max-w-xl py-24 text-center"><CircleAlert className="mx-auto size-8 text-rose-500" /><h2 className="mt-4 text-xl font-semibold">No se pudo cargar el workspace</h2><p className="mt-2 text-sm text-slate-500">Comprueba la conexión y vuelve a intentarlo.</p><Button onClick={() => refetch()} className="mt-6">Reintentar</Button></div>;
+  const { summary, leads, campaigns, businesses } = data;
+  const kpis = [{ label: "Leads totales", value: summary.totalLeads, detail: `${summary.verifiedLeads} con evidencia`, icon: Users, tint: "bg-cyan-50 text-cyan-700" }, { label: "Campañas activas", value: summary.activeCampaigns, detail: `${summary.messagesSent} mensajes registrados`, icon: Mail, tint: "bg-violet-50 text-violet-700" }, { label: "Conversión a cita", value: `${summary.conversionRate}%`, detail: `${summary.bookedLeads} citas atribuidas`, icon: ClipboardCheck, tint: "bg-emerald-50 text-emerald-700" }, { label: "Ingresos atribuidos", value: money(summary.revenueCents), detail: "desde citas registradas", icon: Euro, tint: "bg-amber-50 text-amber-700" }];
+
+  function submitLead(event: FormEvent) { event.preventDefault(); createLead.mutate({ name: leadForm.name, email: leadForm.email || undefined, source: leadForm.source, consentStatus: leadForm.consentProof ? "verified" : "pending", consentProof: leadForm.consentProof || undefined }); }
+  function submitCampaign(event: FormEvent) { event.preventDefault(); createCampaign.mutate({ name: campaignForm.name, channel: "email", subject: campaignForm.subject, bodyTemplate: campaignForm.bodyTemplate, dailyLimit: 25 }); }
+  function loadCsv(event: ChangeEvent<HTMLInputElement>) { const file = event.target.files?.[0]; if (!file) return; const reader = new FileReader(); reader.onload = () => setCsvText(String(reader.result ?? "")); reader.readAsText(file); }
+
+  return <div className="mx-auto max-w-7xl space-y-8 px-1 py-2" id="resumen">
+    <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end"><div><p className="text-sm font-medium text-cyan-700">Workspace operativo</p><h1 className="mt-1 text-3xl font-semibold tracking-[-0.04em]">Buenos días. Aquí está el pulso.</h1><p className="mt-2 text-sm text-slate-500">Controla adquisición, consentimiento y atribución desde un solo lugar.</p></div><div className="flex flex-wrap gap-2"><Button variant="outline" onClick={() => setShowImport(v => !v)}><ArrowUpRight className="size-4" /> Importar CSV</Button><Button variant="outline" onClick={() => setShowLeadForm(v => !v)}><UserPlus className="size-4" /> Nuevo lead</Button><Button onClick={() => setShowCampaignForm(v => !v)}><Plus className="size-4" /> Nueva campaña</Button></div></div>
+    <div className="flex items-center gap-2 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900"><FlaskConical className="size-4 shrink-0" /><span><strong>SIMULATION activa.</strong> Los workflows solo generan previsualizaciones hasta que conectes y autorices un proveedor externo.</span></div>
+    {showLeadForm && <Card className="rounded-2xl border-cyan-200"><CardHeader><CardTitle>Registrar contacto autorizado</CardTitle><CardDescription>Sin consentimiento verificable, el contacto queda fuera de cualquier envío.</CardDescription></CardHeader><CardContent><form onSubmit={submitLead} className="grid gap-3 md:grid-cols-4"><Input required placeholder="Nombre" value={leadForm.name} onChange={e => setLeadForm({ ...leadForm, name: e.target.value })} /><Input type="email" placeholder="Email" value={leadForm.email} onChange={e => setLeadForm({ ...leadForm, email: e.target.value })} /><Input required placeholder="Origen (ej. formulario web)" value={leadForm.source} onChange={e => setLeadForm({ ...leadForm, source: e.target.value })} /><Input placeholder="Prueba / URL / timestamp de consentimiento" value={leadForm.consentProof} onChange={e => setLeadForm({ ...leadForm, consentProof: e.target.value })} /><div className="md:col-span-4 flex justify-end"><Button type="submit" disabled={createLead.isPending}>Guardar contacto</Button></div></form></CardContent></Card>}
+    {showImport && <Card className="rounded-2xl border-cyan-200"><CardHeader><CardTitle>Importación CSV segura</CardTitle><CardDescription>Cabeceras: name, email, phone, source, sourceUrl, city, consentProof. Se normaliza y deduplica en servidor.</CardDescription></CardHeader><CardContent><div className="flex flex-col gap-4 sm:flex-row sm:items-center"><Input type="file" accept=".csv,text/csv" onChange={loadCsv} className="sm:max-w-sm" /><span className="text-xs text-slate-500">Sin envío automático durante la importación.</span></div>{csvText && <div className="mt-4 rounded-xl bg-slate-50 p-4"><p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Vista previa (primeras 4 filas)</p><pre className="mt-2 max-h-32 overflow-auto whitespace-pre-wrap text-xs text-slate-700">{csvText.split(/\r?\n/).filter(Boolean).slice(0, 4).join("\n")}</pre><div className="mt-4 flex justify-end"><Button onClick={() => importCsv.mutate({ csv: csvText, source: "CSV import" })} disabled={importCsv.isPending}>{importCsv.isPending ? "Validando…" : "Validar e importar"}</Button></div></div>}</CardContent></Card>}
+    {showCampaignForm && <Card className="rounded-2xl border-violet-200"><CardHeader><CardTitle>Crear campaña de prueba</CardTitle><CardDescription>Se guarda como email + simulation. Variables disponibles: {'{{name}}'} y {'{{businessName}}'}.</CardDescription></CardHeader><CardContent><form onSubmit={submitCampaign} className="space-y-3"><Input required placeholder="Nombre de la campaña" value={campaignForm.name} onChange={e => setCampaignForm({ ...campaignForm, name: e.target.value })} /><Input placeholder="Asunto" value={campaignForm.subject} onChange={e => setCampaignForm({ ...campaignForm, subject: e.target.value })} /><textarea required className="min-h-28 w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-ring/40" value={campaignForm.bodyTemplate} onChange={e => setCampaignForm({ ...campaignForm, bodyTemplate: e.target.value })} /><div className="flex justify-end"><Button type="submit" disabled={createCampaign.isPending}>Guardar en simulation</Button></div></form></CardContent></Card>}
+    <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">{kpis.map(({ label, value, detail, icon: Icon, tint }) => <Card key={label} className="rounded-2xl border-0 shadow-sm"><CardContent className="p-5"><div className="flex items-start justify-between"><div><p className="text-sm text-slate-500">{label}</p><p className="mt-3 text-3xl font-semibold tracking-tight">{value}</p><p className="mt-1 text-xs text-slate-500">{detail}</p></div><div className={`rounded-xl p-2.5 ${tint}`}><Icon className="size-4" /></div></div></CardContent></Card>)}</div>
+    <div className="grid gap-5 xl:grid-cols-[1.35fr_.65fr]">
+      <Card id="leads" className="rounded-2xl border-0 shadow-sm"><CardHeader className="border-b"><div className="flex items-center justify-between"><div><CardTitle>Leads recientes</CardTitle><CardDescription>La suppression list siempre prevalece.</CardDescription></div><span className="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-600">{leads.length} visibles</span></div></CardHeader><CardContent className="p-0"><div className="divide-y">{leads.length === 0 && <div className="p-8 text-center text-sm text-slate-500">Todavía no hay leads. Registra el primero con evidencia de consentimiento.</div>}{leads.map(lead => <div key={lead.id} className="flex flex-col gap-3 p-5 sm:flex-row sm:items-center sm:justify-between"><div className="min-w-0"><div className="flex items-center gap-2"><p className="truncate font-medium">{lead.name}</p><span className={`rounded-full px-2 py-0.5 text-[11px] ${lead.consentStatus === "verified" && !lead.doNotContact ? "bg-emerald-50 text-emerald-700" : "bg-rose-50 text-rose-700"}`}>{consentLabel(lead.consentStatus, lead.doNotContact)}</span></div><p className="mt-1 truncate text-sm text-slate-500">{lead.email ?? lead.phone ?? "Sin canal"} · {lead.source}</p></div><div className="flex items-center gap-3"><span className="text-xs text-slate-500">{statusLabel(lead.status)}</span>{lead.status === "new" && lead.consentStatus === "verified" && !lead.doNotContact && <Button size="sm" variant="outline" onClick={() => updateStatus.mutate({ leadId: lead.id, status: "qualified" })}>Cualificar <ChevronRight className="size-3" /></Button>}</div></div>)}</div></CardContent></Card>
+      <Card id="campanas" className="rounded-2xl border-0 shadow-sm"><CardHeader className="border-b"><CardTitle>Campañas</CardTitle><CardDescription>Ejecuta solo previsualizaciones.</CardDescription></CardHeader><CardContent className="space-y-3 p-5">{campaigns.length === 0 && <p className="py-5 text-sm text-slate-500">Crea una campaña para activar el primer dry-run.</p>}{campaigns.map(campaign => <div key={campaign.id} className="rounded-2xl bg-slate-50 p-4"><div className="flex items-start justify-between gap-3"><div><p className="font-medium">{campaign.name}</p><p className="mt-1 text-xs text-slate-500">{campaign.channel.toUpperCase()} · límite {campaign.dailyLimit}/día</p></div><span className="rounded-full bg-amber-100 px-2 py-1 text-[10px] font-semibold text-amber-800">{campaign.mode.toUpperCase()}</span></div><Button size="sm" className="mt-4 w-full" variant="outline" disabled={runSimulation.isPending} onClick={() => runSimulation.mutate({ campaignId: campaign.id })}><FlaskConical className="size-3" /> Ejecutar dry-run</Button></div>)}</CardContent></Card>
+    </div>
+    <Card id="consentimiento" className="rounded-2xl border-0 bg-slate-950 text-white shadow-sm"><CardContent className="flex flex-col gap-5 p-6 sm:flex-row sm:items-center sm:justify-between"><div><div className="flex items-center gap-2 text-emerald-300"><ShieldCheck className="size-4" /><span className="text-sm font-medium">Guardrail activo</span></div><h2 className="mt-2 text-xl font-medium">{summary.totalLeads - summary.verifiedLeads} contactos fuera de alcance comercial</h2><p className="mt-2 max-w-2xl text-sm leading-6 text-slate-400">Solo los leads con consentimiento verificado, canal disponible y sin baja pueden entrar en una simulación. El modo live no se activa desde este panel.</p></div><div className="flex items-center gap-2 text-sm text-slate-300"><XCircle className="size-4 text-rose-400" /> suppression prevalece</div></CardContent></Card>
+  </div>;
+}
+
+export default function Home() {
+  const { user, loading } = useAuth();
+  if (loading) return <div className="grid min-h-screen place-items-center text-sm text-slate-500">Cargando…</div>;
+  if (!user) return <Intro />;
+  return <DashboardLayout><Dashboard /></DashboardLayout>;
+}

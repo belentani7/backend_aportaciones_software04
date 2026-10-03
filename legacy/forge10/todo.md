@@ -1,0 +1,41 @@
+# Project TODO
+
+- [x] Definir el modelo de componente con nombre, descripción, repositorio, estrellas, capa, seis puntuaciones y veredicto
+- [x] Mantener los seis criterios exactos: backend, frontend, utilidad, relevancia, potencial e identidad
+- [x] Aplicar una escala estricta de 0 a 10 y calcular automáticamente el veredicto 10/10
+- [x] Crear el panel interactivo con métricas globales y visualizaciones por criterio
+- [x] Crear listado de candidatos con ficha detallada y puntuaciones desglosadas
+- [x] Atenuar o marcar visualmente los componentes que no alcanzan 10/10 en todos los criterios
+- [x] Crear la vista exacta "Stack 10/10" agrupada por backend y frontend
+- [x] Mostrar la justificación de cada puntuación de los componentes aprobados
+- [x] Crear la página de identidad "Forge10" con manifiesto, principios y métricas
+- [x] Implementar exportación del informe completo como JSON estructurado
+- [x] Añadir API tipada para consultar candidatos, métricas, pila aprobada y exportación
+- [x] Añadir pruebas Vitest para puntuaciones, filtro 10/10, métricas y exportación JSON
+- [x] Verificar accesibilidad, estados vacíos, responsive y calidad visual en escritorio y móvil
+- [x] Ejecutar check, tests y build antes de la entrega
+- [x] Añadir verdict/perfect al modelo compartido o separar claramente el tipo auditado con veredicto
+- [x] Implementar validación runtime estricta para garantizar puntuaciones entre 0 y 10
+- [x] Añadir estados de carga, error y vacío para overview, candidatos, Stack 10/10 e identidad
+- [x] Hacer estados de carga, error y vacío mutuamente excluyentes por sección
+- [x] Ejecutar verificación explícita de teclado, foco, landmarks, nombres accesibles y contraste
+- [x] Refinar el lenguaje visual hacia un cockpit de certificación técnica distintivo
+- [x] Renderizar contenido principal de Overview y Stack 10/10 solo cuando la consulta esté lista y válida
+- [x] Crear checklist trazable de accesibilidad con resultados de teclado, foco, landmarks, nombres accesibles y contraste
+- [x] Añadir motivos visuales propios de certificación técnica y documentar la revisión visual final
+- [x] Reforzar el sistema visual con matriz de criterios, sellos/veredictos y jerarquía instrumental más distintiva
+- [x] Capturar y documentar evidencia visual final posterior a los cambios de identidad
+- [x] Auditar todas las líneas relevantes del repositorio con criterio 10/10 y registrar hallazgos
+- [x] Revisar seguridad, accesibilidad, rendimiento, contratos, pruebas y configuración de publicación
+- [x] Corregir todos los hallazgos verificables y añadir cobertura de prueba cuando proceda
+- [x] Ejecutar validación final completa y confirmar cero fallos bloqueantes antes de publicar
+- [x] Crear o identificar el repositorio GitHub destino y publicar solo el estado aprobado
+- [x] Resolver vulnerabilidades de dependencias de producción hasta `pnpm audit` sin hallazgos conocidos
+- [x] Actualizar Express y adaptar rutas wildcard de almacenamiento y fallback SPA a Express 5
+- [x] Confirmar preview HTTP 200, contenido Forge10 y endpoint tRPC operativo
+- [x] Confirmar tipos, 7 pruebas, formato Prettier, build y diff sin errores
+- [x] Resolver o justificar el warning de chunk frontend superior a 500 kB y revalidar build
+- [x] Actualizar la configuración Vite/plugin para eliminar `optimizeDeps.rollupOptions` deprecado
+- [x] Añadir pruebas para el proxy de almacenamiento y fallbacks SPA migrados a Express 5
+- [ ] Conectar correctamente `belentani7/forge10` mediante un clon GitHub separado sin alterar el remoto interno
+- [ ] Verificar por GitHub API que la rama por defecto contiene el código aprobado y el informe de auditoría

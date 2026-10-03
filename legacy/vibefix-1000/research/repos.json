@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://github.com",
+    "name": "kyrolabs/awesome-agents: 🤖 Awesome list of AI Agents",
+    "snippet": "Awesome Agents is a curated list of open-source tools and products to build AI agents. New list: Awesome ADE — open-source Agentic Development Environments: ...",
+    "host_name": "github.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.openhands.dev",
+    "name": "Top 7 Self-Hosted and Open-Source AI Coding Agents in",
+    "snippet": "Jun 25, 2026 — Compare the best open-source AI coding agents in 2026 : OpenHands, Cline, Aider, and more. Find the right self-hosted agent for your team.",
+    "host_name": "www.openhands.dev",
+    "rank": 1,
+    "date": "Jun 25, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://dev.to",
+    "name": "9 open-source AI coding tools that every developer should",
+    "snippet": "Nov 4, 2024 — 1. SWE -Kit : Opensource head-less IDE for Coding agents · 2. Composio: AI integration and tooling platform · 3. Aider - The AI Pair-programmer.",
+    "host_name": "dev.to",
+    "rank": 2,
+    "date": "Nov 4, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://openreview.net",
+    "name": "OpenHands: An Open Platform for AI Software Developers",
+    "snippet": "by X Wang · Cited by 1141 — This paper introduces an open platform with the event-driven architecture to advance the AI agent development, especially focusing on coding and web browsing.",
+    "host_name": "openreview.net",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  }
+]
