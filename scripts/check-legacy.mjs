@@ -33,7 +33,7 @@ export function inspect(root) {
       continue;
     }
     const m = url.match(REPO_URL);
-    if (!m || m[1].toLowerCase() !== clean.toLowerCase() || label.trim().toLowerCase() !== clean.toLowerCase()) {
+    if (!m || m[1].toLowerCase() !== clean.toLowerCase() || label.trim().replace(/^`|`$/g, "").toLowerCase() !== clean.toLowerCase()) {
       diagnostics.push(`Source URL / label does not match ${clean}`);
     }
     manifest.set(clean, url);
