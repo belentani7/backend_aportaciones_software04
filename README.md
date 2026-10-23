@@ -26,3 +26,17 @@ Cada carpeta de `legacy/` conserva el contenido del repo original sin reescribir
 | `legacy/LEGACY-REVENUE-OS-2026` | [`LEGACY-REVENUE-OS-2026`](https://github.com/belentani7/LEGACY-REVENUE-OS-2026) | 29 | priv | — | Sistema local para vender y operar un servicio gestionado de recepción y calificación de l |
 | `legacy/money-machine-24h` | [`money-machine-24h`](https://github.com/belentani7/money-machine-24h) | 20 | priv | — | Autonomous revenue-generation engine. FastAPI + APScheduler + SQLAlchemy + PostgreSQL. |
 | `legacy/n8n-instagram-automation` | [`n8n-instagram-automation`](https://github.com/belentani7/n8n-instagram-automation) | 11 | priv | — | Estado: preparado para importación, revisión humana obligatoria y publicación desactivada  |
+
+## Verificación automática del archivo de fuentes
+
+El archivo privado de 16 proyectos originales se protege con comprobaciones **ejecutables y sin dependencias externas**:
+
+```bash
+npm run verify
+# O para obtener un resultado estructurado:
+node scripts/check-legacy.mjs --json
+```
+
+`scripts/check-legacy.mjs` obtiene las fuentes desde las rutas `legacy/...` indicadas en este README y compara los nombres, los enlaces originales, la presencia física de directorios y los enlaces simbólicos inesperados. El comando finaliza con código de error si falta algo o aparecen carpetas sin catalogar. `npm test` cubre pérdidas, adiciones, referencias alteradas y enlaces simbólicos. El workflow de GitHub ejecuta los controles sobre PR y main.
+
+**Límite esencial:** verificar directorios no equivale a una copia de seguridad íntegra. El historial de Git no se conserva en este repositorio aplanado. Antes de borrar un repositorio de origen, se necesita un backup independiente, verificable, accesible y con historial/etiquetas/ramas si corresponde. No publicar jamás este repositorio ni sus fuentes privadas por una prueba satisfactoria.
