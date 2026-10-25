@@ -50,6 +50,32 @@ export function inspect(root) {
       diagnostics.push(`Unexpected file or link in legacy/: ${entry.name}`);
     }
     actual.add(entry.name);
+    if (entry.isDirectory() && !entry.isSymbolicLink()) {
+      // A folder name alone is not evidence that any legacy source survived.
+      // Walk without following symlinks: nested links could expose files outside
+      // the flattened source when this tree is copied or packaged.
+      const pending = [{ path: full, relative: entry.name }];
+      let files = 0;
+      while (pending.length) {
+        const current = pending.pop();
+        let children;
+        try {
+          children = readdirSync(current.path, { withFileTypes: true });
+        } catch {
+          diagnostics.push(`Unreadable legacy directory: ${current.relative}`);
+          continue;
+        }
+        for (const child of children) {
+          const childPath = join(current.path, child.name);
+          const relative = `${current.relative}/${child.name}`;
+          if (child.isSymbolicLink()) diagnostics.push(`Nested symbolic link in legacy/: ${relative}`);
+          else if (child.isDirectory()) pending.push({ path: childPath, relative });
+          else if (child.isFile()) files++;
+          else diagnostics.push(`Unexpected special file in legacy/: ${relative}`);
+        }
+      }
+      if (files === 0) diagnostics.push(`Empty legacy source: ${entry.name}`);
+    }
   }
   const missing = [...manifest.keys()].filter((name) => !actual.has(name));
   const untracked = [...actual].filter((name) => !manifest.has(name));
