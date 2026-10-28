@@ -6,5 +6,8 @@
     "check:legacy": "node scripts/check-legacy.mjs",
     "test": "node --test tests/*.test.mjs",
     "verify": "npm run check:legacy && npm test"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
