@@ -49,7 +49,8 @@ test("rejects symlinked legacy directory", (t) => {
   rmSync(join(root, "legacy", "source"), { recursive: true });
   const outside = join(root, "outside");
   mkdirSync(outside);
-  symlinkSync(outside, join(root, "legacy", "source"), "dir");
+  // "junction" no requiere privilegios en Windows y en Linux se comporta como symlink de directorio.
+  symlinkSync(outside, join(root, "legacy", "source"), "junction");
   const result = inspect(root);
   assert.equal(result.ok, false);
   assert.ok(result.diagnostics.some(item => item.includes("Unexpected file or link")));

@@ -20,3 +20,5 @@ jobs:
           node-version: "22"
       - name: Verify inventory and source provenance
         run: npm run verify
+      - name: Verificación de protocolos
+        run: test -f README.md && test -f LICENSE && test -f .gitignore && test -f .github/CODEOWNERS

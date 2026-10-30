@@ -40,3 +40,23 @@ node scripts/check-legacy.mjs --json
 `scripts/check-legacy.mjs` obtiene las fuentes desde las rutas `legacy/...` indicadas en este README y compara los nombres, los enlaces originales, la presencia física de directorios y los enlaces simbólicos inesperados. El comando finaliza con código de error si falta algo o aparecen carpetas sin catalogar. `npm test` cubre pérdidas, adiciones, referencias alteradas y enlaces simbólicos. El workflow de GitHub ejecuta los controles sobre PR y main.
 
 **Límite esencial:** verificar directorios no equivale a una copia de seguridad íntegra. El historial de Git no se conserva en este repositorio aplanado. Antes de borrar un repositorio de origen, se necesita un backup independiente, verificable, accesible y con historial/etiquetas/ramas si corresponde. No publicar jamás este repositorio ni sus fuentes privadas por una prueba satisfactoria.
+
+## Utilidad
+
+- **Utilidad social:** preserva y audita el archivo de 16 proyectos privados del ecosistema con comprobaciones ejecutables (`npm run verify`), de modo que las fuentes no se pierdan ni se publiquen sin autorización, y el historial de decisiones quede trazado en el manifiesto del README.
+- **Utilidad comercial:** es la capa de implementación de la Mother 04 (negocio y automatización: CRM, leads consentidos, sistemas de ingresos, según `MOTHER.md` y `PROJECT_MASTER_PROMPT.md`). El catálogo exportable (`npm run export`) permite inventariar los activos disponibles para definir un servicio gestionado con entregas reales.
+
+## Export
+
+El manifiesto completo de fuentes y su estado de integridad se exporta como JSON:
+
+```bash
+npm run export            # a stdout
+node scripts/export.mjs --out export.json   # a fichero (no commitear: es temporal)
+```
+
+Exporta catálogo (carpetas, repos originales, tamaño, visibilidad), no el contenido de `legacy/`.
+
+## Licencia
+
+MIT — ver [LICENSE](LICENSE). La licencia cubre el código propio de este repositorio (scripts, tests, flujos de CI). El contenido de `legacy/` conserva sus términos originales, es privado o de terceros y **no** queda cubierto por esta licencia ni debe publicarse.
